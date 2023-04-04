@@ -1,0 +1,59 @@
+{
+  "name": "sesimi-tutorial",
+  "private": true,
+  "version": "0.2.2",
+  "type": "module",
+  "author": "Sesimi R&D",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite",
+    "clean": "rm -rf dist",
+    "vite:build": "vite build",
+    "build": "npm run clean && npm run vite:build && bundle-exolite-remotion || true && deploy-exolite-to-zip",
+    "setup": "npm install && rename-project-to-dir && npm run add-eslint",
+    "add-eslint": "npx install-peerdeps --dev @myadbox/eslint-config-exoplanet",
+    "add-remotion": "npm i --save --save-exact remotion@3.3.54 && npm i --save-dev --save-exact @remotion/player@3.3.54 @myadbox/remotion-bundler@2"
+  },
+  "engines": {
+    "node": ">=16.16"
+  },
+  "repository": {
+    "url": "https://github.com/myadbox/exolite",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/myadbox/exolite/issues"
+  },
+  "dependencies": {
+    "@myadbox/exoplanet-toolkit": "^1.0.22",
+    "lazysizes": "^5.3.2"
+  },
+  "devDependencies": {
+    "@myadbox/eslint-config-exoplanet": "^1.1.0",
+    "@myadbox/exoplanet-deployment": "^2.0.2",
+    "@myadbox/nebula-template-utils": "^0.2.1",
+    "@myadbox/prettier-config-exoplanet": "^1.0.6",
+    "eslint": "^8.37.0",
+    "prettier": "^2.8.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^4.9.5"
+  },
+  "prettier": "@myadbox/prettier-config-exoplanet",
+  "eslintConfig": {
+    "root": true,
+    "extends": "@myadbox/eslint-config-exoplanet"
+  },
+  "eslintIgnore": [
+    "src/animation/lib/**/*",
+    "node_modules",
+    "dist"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  }
+}
