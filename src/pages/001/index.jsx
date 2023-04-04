@@ -41,6 +41,7 @@ const Template = (props) => {
         <p>{copy}</p>
       </Wrapper>
       <div
+        data-hitarea='hero'
         style={{
           position: `absolute`,
           width: `100vw`,
