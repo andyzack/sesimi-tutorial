@@ -3,7 +3,7 @@ export default {
   start: `Let’s build a `,
   brand: `Ogilvy`,
   end: ` template…`,
-  copy: `with Sesimi tools`,
+  copy: `மனித உரிமைகளை அவமதித்தலும்`,
   hero: {
     name: `forest-image-three`,
     description: null,

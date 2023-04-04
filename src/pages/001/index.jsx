@@ -38,7 +38,7 @@ const Template = (props) => {
         }}
       >
         <Title start={start} brand={brand} end={end} />
-        <p>{copy}</p>
+        <p style={{fontSize:`3em`}}>{copy}</p>
       </Wrapper>
       <div
         data-hitarea='hero'
