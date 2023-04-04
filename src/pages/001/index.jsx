@@ -13,7 +13,7 @@ const Template = (props) => {
   // Ensure that props you destructure from useTemplate match those found in
   // data/values.mjs and data/config.mjs `fields`.
   const {
-    page: {start, brand, end, copy},
+    page: {start, brand, end, copy, hero},
   } = useTemplate({page, ...props})
   // const animation = useAnimation(props)
 
@@ -39,14 +39,13 @@ const Template = (props) => {
           id="reactLogo"
           // images under 5KB can be imported directly (see top of this file) and will be
           // inlined as Base64 with the template js file
-          src={reactLogo}
+          src={hero.url}
           // for static (non-Sesimi assets) local images above 5KB when optimised, use the following syntax:
           // src={`${root}/img/react.svg`}
           alt="React"
           width="80"
           style={{
-            opacity: `0.2`,
-            width: `min(12vmax, 5.5em)`,
+            width: `100%`,
           }}
         />
       </Wrapper>

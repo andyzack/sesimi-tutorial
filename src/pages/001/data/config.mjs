@@ -36,5 +36,14 @@ export default {
         details: `This is a detail tooltip`,
       },
     }),
+    createField.asset({
+      name: `hero`,
+      required: true,
+      options: {
+        label: `Hero`,
+        details: `This is a hero image`,
+        limitTo: [`ogilvy-test`]
+      },
+    }),
   ],
 }
