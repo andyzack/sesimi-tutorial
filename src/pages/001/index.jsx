@@ -13,7 +13,7 @@ const Template = (props) => {
   // Ensure that props you destructure from useTemplate match those found in
   // data/values.mjs and data/config.mjs `fields`.
   const {
-    page: {start, brand, end},
+    page: {start, brand, end, copy},
   } = useTemplate({page, ...props})
   // const animation = useAnimation(props)
 
@@ -34,7 +34,7 @@ const Template = (props) => {
     >
       <Wrapper>
         <Title start={start} brand={brand} end={end} />
-        <p>with React and CSS</p>
+        <p>{copy}</p>
         <img
           id="reactLogo"
           // images under 5KB can be imported directly (see top of this file) and will be

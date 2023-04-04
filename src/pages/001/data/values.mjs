@@ -1,6 +1,7 @@
 // @ts-check
 export default {
   start: `Let’s build a `,
-  brand: `sesimi`,
+  brand: `Ogilvy`,
   end: ` template…`,
+  copy: `with Sesimi tools`,
 }

@@ -27,5 +27,14 @@ export default {
         label: `End`,
       },
     }),
+    createField.text({
+      name: `copy`,
+      maxLength: 10,
+      required: true,
+      options: {
+        label: `Copy`,
+        details: `This is a detail tooltip`,
+      },
+    }),
   ],
 }
