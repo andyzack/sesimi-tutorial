@@ -35,6 +35,7 @@ const Template = (props) => {
       <Wrapper
         style={{
           zIndex: 1,
+          filter: `drop-shadow(0 0 7px #000)`,
         }}
       >
         <Title start={start} brand={brand} end={end} />

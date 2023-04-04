@@ -1,5 +1,5 @@
 // @ts-check
-import {allFormats, allSizes, defineConfig, embedSizes} from '@myadbox/nebula-template-utils'
+import {allFormats, allSizes, defineConfig, embedSizes, Format} from '@myadbox/nebula-template-utils'
 
 export default defineConfig({
   sizes: embedSizes({
@@ -8,6 +8,6 @@ export default defineConfig({
     },
   }),
   defaultSize: allSizes.bannerAd.main.sizes.halfPageAd.label,
-  formats: allFormats.web.static,
+  formats: [Format.PDF, Format.GIF, Format.JPG, Format.PNG],
   fields: [],
 })
