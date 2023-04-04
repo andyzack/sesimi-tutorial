@@ -42,7 +42,8 @@ export default {
       options: {
         label: `Hero`,
         details: `This is a hero image`,
-        limitTo: [`ogilvy-test`]
+        limitTo: [`ogilvy-test`],
+        controls: [`crop`, `upload`], // optional
       },
     }),
   ],

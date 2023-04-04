@@ -32,9 +32,21 @@ const Template = (props) => {
         backgroundBlendMode: `overlay`,
       }}
     >
-      <Wrapper>
+      <Wrapper
+        style={{
+          zIndex: 1,
+        }}
+      >
         <Title start={start} brand={brand} end={end} />
         <p>{copy}</p>
+      </Wrapper>
+      <div
+        style={{
+          position: `absolute`,
+          width: `100vw`,
+          height: `100vh`,
+        }}
+      >
         <img
           id="reactLogo"
           // images under 5KB can be imported directly (see top of this file) and will be
@@ -45,10 +57,14 @@ const Template = (props) => {
           alt="React"
           width="80"
           style={{
+            position: `absolute`,
+            objectFit: `cover`,
             width: `100%`,
+            height: `100%`,
+            zIndex: 0,
           }}
         />
-      </Wrapper>
+      </div>
     </Body>
   )
 }
