@@ -1,5 +1,6 @@
 // @ts-check
 export default {
+  lang: `tamil`,
   start: `Let’s build a `,
   brand: `Ogilvy`,
   end: ` template…`,

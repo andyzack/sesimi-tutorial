@@ -3,6 +3,16 @@ import {createField} from '@myadbox/nebula-template-utils'
 
 export default {
   fields: [
+    createField.asset({
+      name: `hero`,
+      required: true,
+      options: {
+        label: `Hero`,
+        details: `This is a hero image`,
+        limitTo: [`ogilvy-test`],
+        controls: [`crop`, `upload`], // optional
+      },
+    }),
     createField.text({
       name: `start`,
       maxLength: 30,
@@ -29,22 +39,23 @@ export default {
     }),
     createField.text({
       name: `copy`,
-      maxLength: 10,
       required: true,
       options: {
         label: `Copy`,
         details: `This is a detail tooltip`,
       },
     }),
-    createField.asset({
-      name: `hero`,
-      required: true,
+    createField.select({
+      name: `lang`,
       options: {
-        label: `Hero`,
-        details: `This is a hero image`,
-        limitTo: [`ogilvy-test`],
-        controls: [`crop`, `upload`], // optional
-      },
+        label: `Subhead language font choice`,
+        details: `Choose correct font to display in subheadline`,
+        choices: [
+          {value: `tamil`, label: `Tiro Tamil`},
+          {value: `hindi`, label: `Tiro Devanagari Hindi`},
+          {value: `bengali`, label: `Noto Sans Bengali`},
+        ]
+      }
     }),
   ],
 }

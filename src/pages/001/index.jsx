@@ -3,7 +3,6 @@
 
 import * as React from 'react'
 import {Body, useTemplate /*, useAnimation*/} from '@myadbox/exoplanet-toolkit'
-import reactLogo from '../../img/react.svg'
 import page from './data/values.mjs'
 import Title from '../../components/Title/Title'
 import Wrapper from '../../components/Wrapper/Wrapper'
@@ -13,9 +12,18 @@ const Template = (props) => {
   // Ensure that props you destructure from useTemplate match those found in
   // data/values.mjs and data/config.mjs `fields`.
   const {
-    page: {start, brand, end, copy, hero},
+    page: {start, brand, end, copy, hero, lang},
   } = useTemplate({page, ...props})
   // const animation = useAnimation(props)
+
+  const langChoice = {
+    tamil: `'Tiro Tamil', serif`,
+    hindi: `'Tiro Hindi', serif`,
+    bengali: `'Tiro Bengali', serif`,
+  }
+
+  console.log(`langChoice:`, langChoice[lang])
+  console.log(`copyText:`, copy)
 
   return (
     <Body
@@ -39,7 +47,11 @@ const Template = (props) => {
         }}
       >
         <Title start={start} brand={brand} end={end} />
-        <h2>{copy}</h2>
+        <h2
+          style={{fontFamily: langChoice[lang], fontWeight:300}}
+        >
+          {copy}
+        </h2>
       </Wrapper>
       <div
         data-hitarea='hero'
