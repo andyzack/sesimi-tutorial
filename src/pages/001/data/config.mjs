@@ -46,6 +46,17 @@ export default {
       },
     }),
     createField.select({
+      name: `headlineFont`,
+      options: {
+        label: `Headline font choice`,
+        details: `Choose correct font to display in headline`,
+        choices: [
+          {value: `style1`, label: `Noto Sans`},
+          {value: `style2`, label: `Lobster`},
+        ]
+      }
+    }),
+    createField.select({
       name: `lang`,
       options: {
         label: `Subhead language font choice`,

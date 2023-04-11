@@ -12,18 +12,20 @@ const Template = (props) => {
   // Ensure that props you destructure from useTemplate match those found in
   // data/values.mjs and data/config.mjs `fields`.
   const {
-    page: {start, brand, end, copy, hero, lang},
+    page: {start, brand, end, copy, hero, lang, headlineFont},
   } = useTemplate({page, ...props})
   // const animation = useAnimation(props)
+
+  const headlineFontChoice = {
+    style1: `'Noto Sans', sans-serif`,
+    style2: `'Lobster', cursive`,
+  }
 
   const langChoice = {
     tamil: `'Tiro Tamil', serif`,
     hindi: `'Tiro Hindi', serif`,
     bengali: `'Tiro Bengali', serif`,
   }
-
-  console.log(`langChoice:`, langChoice[lang])
-  console.log(`copyText:`, copy)
 
   return (
     <Body
@@ -46,7 +48,7 @@ const Template = (props) => {
           filter: `drop-shadow(0 0 7px #000)`,
         }}
       >
-        <Title start={start} brand={brand} end={end} />
+        <Title start={start} brand={brand} end={end} style={{fontFamily: headlineFontChoice[headlineFont]}} />
         <h2
           style={{fontFamily: langChoice[lang], fontWeight:300}}
         >

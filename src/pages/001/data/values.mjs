@@ -1,6 +1,7 @@
 // @ts-check
 export default {
   lang: `tamil`,
+  headlineFont: `style1`,
   start: `Let’s build a `,
   brand: `Ogilvy`,
   end: ` template…`,
