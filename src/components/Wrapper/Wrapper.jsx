@@ -8,11 +8,11 @@ export const Wrapper = ({children, className = ``, style = {}, ...props}) => {
       className={`
         wrapper
         ${className}
-        grid gap-4 h-screen m-auto place-content-center place-items-center text-center
+        grid gap-4 h-screen m-auto place-content-center place-items-center text-center w-[var(--wrapper-width)]
       `}
 
       style={{
-        width: `calc(100vw - 4em)`,
+        '--wrapper-width': `calc(100vw - 4em)`,
         ...style,
       }}
     >
