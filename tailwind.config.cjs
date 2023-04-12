@@ -2,7 +2,7 @@
 
 /** @type {import('tailwindcss').Config} */
 const config = {
-  content: [`./src/**/*.{js,jsx,ts,tsx,svg}`],
+  content: [`./{src,dist}/**/*.{js,jsx,ts,tsx,svg}`],
   theme: {
     screens: {
       'min-02/10': { 'raw': `(min-aspect-ratio: 200 / 1000)` }, // Wide Skyscraper
@@ -19,7 +19,7 @@ const config = {
     },
   },
   plugins: [
-    require(`@savvywombat/tailwindcss-grid-areas`),
+    // require(`@savvywombat/tailwindcss-grid-areas`),
   ],
   variants: {
     gridTemplateAreas: [`responsive`]
