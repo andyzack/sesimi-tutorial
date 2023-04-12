@@ -13,4 +13,5 @@ export default {
     url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/forest-image-three_l7omih`,
     datasets: {},
   },
+  letterSpacing: `0.1`,
 }

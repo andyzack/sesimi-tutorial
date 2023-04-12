@@ -45,6 +45,12 @@ export default {
         details: `This is a detail tooltip`,
       },
     }),
+    createField.text({
+      name: `letterSpacing`,
+      options: {
+        label: `Letter spacing`,
+      },
+    }),
     createField.select({
       name: `headlineFont`,
       options: {

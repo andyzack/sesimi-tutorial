@@ -12,7 +12,7 @@ const Template = (props) => {
   // Ensure that props you destructure from useTemplate match those found in
   // data/values.mjs and data/config.mjs `fields`.
   const {
-    page: {start, brand, end, copy, hero, lang, headlineFont},
+    page: {start, brand, end, copy, hero, lang, headlineFont, letterSpacing},
   } = useTemplate({page, ...props})
   // const animation = useAnimation(props)
 
@@ -22,10 +22,21 @@ const Template = (props) => {
   }
 
   const langChoice = {
-    tamil: `'Tiro Tamil', serif`,
-    hindi: `'Tiro Hindi', serif`,
-    bengali: `'Tiro Bengali', serif`,
+    tamil: {
+      fontFamily: `'Tiro Tamil', serif`,
+      letterSpacing: `0.1em`,
+    },
+    hindi: {
+      fontFamily: `'Tiro Devanagari Hindi', serif`,
+      letterSpacing: `0.2em`,
+    },
+    bengali: {  
+      fontFamily: `'Noto Sans Bengali', sans-serif`,
+      letterSpacing: `0.4em`,
+    },
   }
+
+  console.log(langChoice[lang].letterSpacing)
 
   return (
     <Body
@@ -48,9 +59,9 @@ const Template = (props) => {
           filter: `drop-shadow(0 0 7px #000)`,
         }}
       >
-        <Title start={start} brand={brand} end={end} style={{fontFamily: headlineFontChoice[headlineFont]}} />
+        <Title start={start} brand={brand} end={end} style={{fontFamily: langChoice[lang].fontFamily}} />
         <h2
-          style={{fontFamily: langChoice[lang], fontWeight:300}}
+          style={{fontFamily: langChoice[lang], fontWeight:300, letterSpacing: langChoice[lang].letterSpacing}}
         >
           {copy}
         </h2>
