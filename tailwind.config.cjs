@@ -1,4 +1,5 @@
 // @ts-check
+import gridAreas from '@savvywombat/tailwindcss-grid-areas'
 
 /** @type {import('tailwindcss').Config} */
 const config = {
@@ -19,7 +20,7 @@ const config = {
     },
   },
   plugins: [
-    // require(`@savvywombat/tailwindcss-grid-areas`),
+    gridAreas
   ],
   variants: {
     gridTemplateAreas: [`responsive`]
