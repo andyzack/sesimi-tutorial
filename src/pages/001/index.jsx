@@ -52,7 +52,7 @@ const Template = (props) => {
       }}
     >
       <Wrapper
-        className='z-10 grid-flow-col'
+        className='z-10 min-60/10:grid-flow-col'
         style={{
           filter: `drop-shadow(0 0 7px #000)`,
         }}
