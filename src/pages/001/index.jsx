@@ -59,7 +59,7 @@ const Template = (props) => {
       >
         <Title start={start} brand={brand} end={end} style={{fontFamily: headlineFontChoice[headlineFont]}} />
         <h2
-          className={`text-xl font-light`}
+          className={`text-xl min-04/10:text-2xl min-60/10:text-base min-60/10:leading-normal min-80/10:text-3xl font-light`}
           style={{fontFamily: langChoice[lang], letterSpacing: langChoice[lang].letterSpacing}}
         >
           {copy}

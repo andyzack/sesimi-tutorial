@@ -3,7 +3,7 @@ import * as React from 'react'
 export const Title = ({start = ``, brand = ``, end = ``, style = {}}) => {
   return (
     <h1
-      className={`text-2xl font-bold`}
+      className={`text-2xl min-04/10:text-4xl min-60/10:text-base min-80/10:text-3xl min-60/10:leading-tight font-bold`}
       style={{
         ...style
       }}
