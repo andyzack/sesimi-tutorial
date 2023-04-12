@@ -18,7 +18,12 @@ const config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require(`@savvywombat/tailwindcss-grid-areas`),
+  ],
+  variants: {
+    gridTemplateAreas: [`responsive`]
+  }
 }
 
 module.exports = config

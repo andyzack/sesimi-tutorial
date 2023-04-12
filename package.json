@@ -34,6 +34,7 @@
     "@myadbox/exoplanet-deployment": "^2.1.2",
     "@myadbox/nebula-template-utils": "^0.2.1",
     "@myadbox/prettier-config-exoplanet": "^1.0.6",
+    "@savvywombat/tailwindcss-grid-areas": "^3.0.1",
     "eslint": "^8.37.0",
     "prettier": "^2.8.7",
     "react": "^17.0.2",

@@ -1,8 +1,8 @@
-@media (min-aspect-ratio: 25/10) {
+/* @media (min-aspect-ratio: 25/10) {
   .wrapper {
     grid-auto-flow: column;
   }
-}
+} */
 /* 
 @media ((min-aspect-ratio: 60/10) and (height: 50px)) {
   .wrapper h2 {
