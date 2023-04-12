@@ -1,9 +1,9 @@
 import * as React from 'react'
 
-export const Title = ({start = ``, brand = ``, end = ``, style = {}}) => {
+export const Title = ({start = ``, brand = ``, end = ``, className = ``, style = {}}) => {
   return (
     <h1
-      className={`text-2xl min-04/10:text-4xl min-60/10:text-base min-80/10:text-3xl min-60/10:leading-tight font-bold`}
+      className={`${className} text-2xl min-04/10:text-4xl min-60/10:text-base min-80/10:text-3xl min-60/10:leading-tight font-bold`}
       style={{
         ...style
       }}

@@ -17,21 +17,21 @@ const Template = (props) => {
   // const animation = useAnimation(props)
 
   const headlineFontChoice = {
-    style1: `'Noto Sans', sans-serif`,
-    style2: `'Lobster', cursive`,
+    style1: `font-notoSansEnglish`,
+    style2: `font-lobster`,
   }
 
   const langChoice = {
     tamil: {
-      fontFamily: `'Tiro Tamil', serif`,
+      fontFamily: `font-tiroTamil`,
       letterSpacing: `0.1em`,
     },
     hindi: {
-      fontFamily: `'Tiro Devanagari Hindi', serif`,
+      fontFamily: `font-tiroDevanagari`,
       letterSpacing: `0.2em`,
     },
     bengali: {  
-      fontFamily: `'Noto Sans Bengali', sans-serif`,
+      fontFamily: `font-notoSansBengali`,
       letterSpacing: `0.4em`,
     },
   }
@@ -39,9 +39,7 @@ const Template = (props) => {
   return (
     <Body
       // animation={animation}
-      style={{
-        color: `white`,
-      }}
+      className={`text-white text-xs font-notoSansEnglish`}
       backdropClassName={`bg-midnight-forest`}
       backdropStyle={{
         backgroundImage: `radial-gradient(
@@ -57,10 +55,10 @@ const Template = (props) => {
           filter: `drop-shadow(0 0 7px #000)`,
         }}
       >
-        <Title start={start} brand={brand} end={end} style={{fontFamily: headlineFontChoice[headlineFont]}} />
+        <Title start={start} brand={brand} end={end} className={`${headlineFontChoice[headlineFont]}`} />
         <h2
-          className={`text-xl min-04/10:text-2xl min-60/10:text-base min-60/10:leading-normal min-80/10:text-3xl font-light`}
-          style={{fontFamily: langChoice[lang], letterSpacing: langChoice[lang].letterSpacing}}
+          className={`${langChoice[lang].fontFamily} text-xl min-04/10:text-2xl min-60/10:text-base min-60/10:leading-normal min-80/10:text-3xl font-light tracking-[var(--h2-tracking)]`}
+          style={{'--h2-tracking': langChoice[lang].letterSpacing}}
         >
           {copy}
         </h2>

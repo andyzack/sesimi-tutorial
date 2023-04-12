@@ -5,6 +5,27 @@ import gridAreas from '@savvywombat/tailwindcss-grid-areas'
 const config = {
   content: [`./{src,dist}/**/*.{js,jsx,ts,tsx,svg}`],
   theme: {
+    fontFamily: {
+      notoSansEnglish: [
+        `"Noto Sans"`,
+        `sans-serif`,
+      ],
+      lobster: [
+        `"Lobster", cursive`,
+      ],
+      notoSansBengali: [
+        `"Noto Sans Bengali"`,
+        `sans-serif`,
+      ],
+      tiroDevanagari: [
+        `"Tiro Devanagari"`,
+        `serif`,
+      ],
+      tiroTamil: [
+        `"Tiro Tamil"`,
+        `serif`,
+      ],
+    },
     screens: {
       'min-02/10': { 'raw': `(min-aspect-ratio: 200 / 1000)` }, // Wide Skyscraper
       'min-04/10': { 'raw': `(min-aspect-ratio: 400 / 1000)` }, // Half Page Ad (Double MREC)
