@@ -5,15 +5,13 @@ export const Wrapper = ({children, className = ``, style = {}, ...props}) => {
   return (
     <div
       {...props}
-      className={`wrapper ${className}`}
+      className={`
+        wrapper
+        ${className}
+        grid gap-4 h-screen m-auto place-content-center place-items-center text-center
+      `}
+
       style={{
-        display: `grid`,
-        gap: `1em`,
-        height: `100vh`,
-        margin: `auto`,
-        placeContent: `center`,
-        placeItems: `center`,
-        textAlign: `center`,
         width: `calc(100vw - 4em)`,
         ...style,
       }}

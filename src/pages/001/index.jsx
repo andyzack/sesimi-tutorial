@@ -12,7 +12,7 @@ const Template = (props) => {
   // Ensure that props you destructure from useTemplate match those found in
   // data/values.mjs and data/config.mjs `fields`.
   const {
-    page: {start, brand, end, copy, hero, lang, headlineFont, letterSpacing},
+    page: {start, brand, end, copy, hero, lang, headlineFont},
   } = useTemplate({page, ...props})
   // const animation = useAnimation(props)
 
@@ -36,16 +36,14 @@ const Template = (props) => {
     },
   }
 
-  console.log(langChoice[lang].letterSpacing)
-
   return (
     <Body
       // animation={animation}
       style={{
         color: `white`,
       }}
+      backdropClassName={`bg-midnight-forest`}
       backdropStyle={{
-        backgroundColor: `var(--midnight-forest)`,
         backgroundImage: `radial-gradient(
           hsla(74deg, 100%, 62%, .5) 2%,
           hsla(186deg, 88%, 9%, .4) 100%
@@ -54,25 +52,22 @@ const Template = (props) => {
       }}
     >
       <Wrapper
+        className='z-10'
         style={{
-          zIndex: 1,
           filter: `drop-shadow(0 0 7px #000)`,
         }}
       >
-        <Title start={start} brand={brand} end={end} style={{fontFamily: langChoice[lang].fontFamily}} />
+        <Title start={start} brand={brand} end={end} style={{fontFamily: headlineFontChoice[headlineFont]}} />
         <h2
-          style={{fontFamily: langChoice[lang], fontWeight:300, letterSpacing: langChoice[lang].letterSpacing}}
+          className={`text-xl font-light`}
+          style={{fontFamily: langChoice[lang], letterSpacing: langChoice[lang].letterSpacing}}
         >
           {copy}
         </h2>
       </Wrapper>
       <div
         data-hitarea='hero'
-        style={{
-          position: `absolute`,
-          width: `100vw`,
-          height: `100vh`,
-        }}
+        className={`absolute w-screen h-screen`}
       >
         <img
           id="reactLogo"
@@ -83,13 +78,7 @@ const Template = (props) => {
           // src={`${root}/img/react.svg`}
           alt="React"
           width="80"
-          style={{
-            position: `absolute`,
-            objectFit: `cover`,
-            width: `100%`,
-            height: `100%`,
-            zIndex: 0,
-          }}
+          className={`absolute object-cover w-full h-full z-0`}
         />
       </div>
     </Body>
