@@ -13,30 +13,16 @@ export default {
         controls: [`crop`, `upload`], // optional
       },
     }),
+
     createField.text({
-      name: `start`,
-      maxLength: 30,
+      name: `headline`,
       required: true,
       options: {
-        label: `Start`,
+        label: `Headline`,
+        details: `This is a detail tooltip`,
       },
     }),
-    createField.text({
-      name: `brand`,
-      maxLength: 30,
-      required: true,
-      options: {
-        label: `Brand`,
-      },
-    }),
-    createField.text({
-      name: `end`,
-      maxLength: 30,
-      required: true,
-      options: {
-        label: `End`,
-      },
-    }),
+
     createField.text({
       name: `copy`,
       required: true,
@@ -45,34 +31,23 @@ export default {
         details: `This is a detail tooltip`,
       },
     }),
+
     createField.text({
-      name: `letterSpacing`,
+      name: `cta`,
+      required: true,
       options: {
-        label: `Letter spacing`,
+        label: `CTA`,
+        details: `This is a detail tooltip`,
       },
     }),
-    createField.select({
-      name: `headlineFont`,
+
+    createField.text({
+      name: `disclaimer`,
+      required: true,
       options: {
-        label: `Headline font choice`,
-        details: `Choose correct font to display in headline`,
-        choices: [
-          {value: `style1`, label: `Noto Sans`},
-          {value: `style2`, label: `Lobster`},
-        ]
-      }
-    }),
-    createField.select({
-      name: `lang`,
-      options: {
-        label: `Subhead language font choice`,
-        details: `Choose correct font to display in subheadline`,
-        choices: [
-          {value: `tamil`, label: `Tiro Tamil`},
-          {value: `hindi`, label: `Tiro Devanagari Hindi`},
-          {value: `bengali`, label: `Noto Sans Bengali`},
-        ]
-      }
+        label: `Disclaimer`,
+        details: `This is a detail tooltip`,
+      },
     }),
   ],
 }
