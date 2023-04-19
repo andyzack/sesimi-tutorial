@@ -28,6 +28,7 @@ const Template = (props) => {
     >
       <Wrapper
         disclaimer={disclaimer}
+        cta={cta}
         className={`grid font-VoltePlay`}
       >
 

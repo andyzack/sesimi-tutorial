@@ -3,17 +3,6 @@ import {createField} from '@myadbox/nebula-template-utils'
 
 export default {
   fields: [
-    createField.asset({
-      name: `hero`,
-      required: true,
-      options: {
-        label: `Hero`,
-        details: `This is a hero image`,
-        limitTo: [`ogilvy-test`],
-        controls: [`crop`, `upload`], // optional
-      },
-    }),
-
     createField.text({
       name: `headline`,
       required: true,
@@ -38,6 +27,17 @@ export default {
       options: {
         label: `CTA`,
         details: `This is a detail tooltip`,
+      },
+    }),
+
+    createField.asset({
+      name: `photoshot`,
+      required: true,
+      options: {
+        label: `Photoshot`,
+        details: `This is a photo image`,
+        limitTo: [`ogilvy-test`],
+        controls: [`crop`, `upload`], // optional
       },
     }),
 
