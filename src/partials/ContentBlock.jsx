@@ -50,10 +50,10 @@ export const ContentBlock = ({
           " l  ..  🉐  🏷  ..  ..  ..  ▍"
           " l  📓  ..  🏷  👑  👑  ..  ▍"
           " l  📓  👪  👪  👪  ..  ..  ▍"
-          " l  📓  👪  👪  👪  ..  ..  ▍"
+          " l  ..  👪  👪  👪  ..  ..  ▍"
           " ◣   ▂   ▂  ▂   ▂   ▂   ▂  ◢ "
         `,
-        '--rows2': `18.4fr 8.8fr 35.5fr 187.6fr`,
+        '--rows2': `18.4fr 8.8fr 35.5fr 164.8fr 22.9fr 0`,
         '--columns2': `6.4fr 8.4fr 95.6fr 44.4fr 70.2fr 90.2fr 6.6fr 6.4fr`,
       }}
     >
@@ -208,7 +208,7 @@ export const ContentBlock = ({
         }}
       >
         <span
-          className={`absolute left-0 bottom-0 text-[4.58pt] leading-[1] -rotate-90`}
+          className={`absolute left-0 bottom-0 text-[4.58pt] leading-[1] -rotate-90 w-auto min-12/10:w-1/2`}
           style={{
             transformOrigin: `0 0`,
           }}

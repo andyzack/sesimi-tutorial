@@ -47,7 +47,7 @@ export const FooterBlock = ({cta = ``, partners = {}, className = ``, style = {}
       }}
     >
       <GridItem
-        className={`bg-secondary grid-in-[var(--grid-in)] [clip-path:polygon(0_60%,_100%_0,_100%_100%,_0%_100%)] min-12/10:[clip-path:polygon(0_80%,_100%_0,_100%_100%,_0%_100%)]`}
+        className={`bg-secondary grid-in-[var(--grid-in)] [clip-path:polygon(0_60%,_100%_0,_100%_100%,_0%_100%)] min-12/10:[clip-path:polygon(0_88%,_100%_0,_100%_100%,_0%_100%)]`}
         style={{
           '--grid-in': `1/1/-1/-1`,
         }}
