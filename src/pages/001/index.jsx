@@ -95,14 +95,15 @@ const Template = (props) => {
         className={`
           xo-wrapper
           font-VoltePlay
-          w-screen h-screen text-white grid grid-areas-[var(--areas)] grid-rows-[var(--rows)]
+          w-screen h-screen text-white grid grid-areas-[var(--areas)] grid-rows-[var(--rows1)] min-12/10:grid-rows-[var(--rows2)]
         `}
         style={{
           '--areas': `
             " .. "
             " 🦶 "
           `,
-          '--rows': `1fr 0.6fr`,
+          '--rows1': `1fr 0.6fr`,
+          '--rows2': `1fr 1.2fr`,
         }}
       >
         <GridItem className={`grid-in-[1/1/-1/-1]`}>

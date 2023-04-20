@@ -19,7 +19,11 @@ export const FooterBlock = ({cta = ``, partners = {}, className = ``, style = {}
 
   return (
     <div
-      className={`grid w-full h-full grid-areas-[var(--areas)] grid-rows-[var(--rows)] grid-cols-[var(--columns)]`}
+      className={`grid w-full h-full
+        grid-areas-[var(--areas)]
+        grid-rows-[var(--rows1)] grid-cols-[var(--columns1)]
+        min-12/10:grid-rows-[var(--rows2)] min-12/10:grid-cols-[var(--columns2)]
+      `}
       style={{
         '--areas': `
           " ◤   —   ◥ "
@@ -28,15 +32,24 @@ export const FooterBlock = ({cta = ``, partners = {}, className = ``, style = {}
           " l  🤲   ▍"
           " ◣   ▂   ◢ "
         `,
-        '--rows': `0 50fr 5.4fr 34.2fr 0`,
-        '--columns': `12.4fr 135.6fr 12.4fr`,
+        '--rows1': `0 50fr 5.4fr 34.2fr 0`,
+        '--columns1': `12.4fr 135.6fr 12.4fr`,
+
+        '--areas2': `
+          " ◤   —   ◥ "
+          " l  📣   ▍"
+          " l  ..   ▍"
+          " l  🤲   ▍"
+          " ◣   ▂   ◢ "
+        `,
+        '--rows2': `0 89fr 6.4fr 45.4fr 0`,
+        '--columns2': `132.7fr 182fr 14.6fr`,
       }}
     >
       <GridItem
-        className={`bg-secondary grid-in-[var(--grid-in)]`}
+        className={`bg-secondary grid-in-[var(--grid-in)] [clip-path:polygon(0_60%,_100%_0,_100%_100%,_0%_100%)] min-12/10:[clip-path:polygon(0_80%,_100%_0,_100%_100%,_0%_100%)]`}
         style={{
           '--grid-in': `1/1/-1/-1`,
-          clipPath: `polygon(0 60%, 100% 0, 100% 100%, 0% 100%)`,
         }}
       />
 
