@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { GridItem } from '@myadbox/exoplanet-toolkit'
+import { GridItem, ResponsiveImage as Img } from '@myadbox/exoplanet-toolkit'
 import Price from '@/components/Price'
 import Logo from '@/components/Logo'
 
@@ -7,7 +7,7 @@ import Logo from '@/components/Logo'
 * This is the headline component
 * @param {object} props - all available props
 * @param {string} [props.copy] - copy details to display
-* @param {string} [props.subhead] - sub headline details to display
+* @param {object} [props.photos] - sub headline details to display
 * @param {string} [props.disclaimer] - canvas color to display
 * @param {string} [props.className] - css class names
 * @param {object} [props.style] - css inline style
@@ -18,6 +18,7 @@ import Logo from '@/components/Logo'
 
 export const ContentBlock = ({
     children,
+    photos = {},
     disclaimer = ``,
     className = ``,
     style = {},
@@ -56,6 +57,71 @@ export const ContentBlock = ({
       <GridItem
         className={`
           grid-in-[var(--grid-in)]
+        `}
+        style={{
+          '--grid-in': `👪 / 👪 / -1 / 👪`,
+        }}
+      >
+        <div
+          className={`
+            xo-photos
+            grid grid-rows-[var(--rows)] grid-cols-[var(--columns)] h-full w-full
+          `}
+          style={{
+            '--rows': `1fr 0.1fr 0.075fr 0.025fr`,
+            '--columns': `repeat(8, 1fr)`,
+          }}
+        >
+
+          <GridItem
+            className={`
+              grid-in-[var(--grid-in)]
+            `}
+            style={{
+              '--grid-in': `1 / 1 / -3 / -4`,
+            }}
+          >
+            <Img src={photos[3].url.replace(`v1/studio`,`e_trim/v1/studio`)} className={`w-full h-[82%] absolute object-contain left-[-40px] top-[0]`} />
+          </GridItem>
+
+          <GridItem
+            className={`
+              grid-in-[var(--grid-in)]
+            `}
+            style={{
+              '--grid-in': `1 / 4 / -3 / -1`,
+            }}
+          >
+            <Img src={photos[2].url.replace(`v1/studio`,`e_trim/v1/studio`)} className={`w-full h-[96%] absolute object-contain left-[0] top-[30px] rotate-[6deg]`} />
+          </GridItem>
+
+          <GridItem
+            className={`
+              grid-in-[var(--grid-in)]
+            `}
+            style={{
+              '--grid-in': `1 / 1 / -2 / -4`,
+            }}
+          >
+            <Img src={photos[1].url.replace(`v1/studio`,`e_trim/v1/studio`)} className={`w-full h-[92%] absolute object-contain left-[-6px] top-[60px]`} />
+          </GridItem>
+          
+          <GridItem
+            className={`
+              grid-in-[var(--grid-in)]
+            `}
+            style={{
+              '--grid-in': `1 / 3 / -1 / -1`,
+            }}
+          >
+            <Img src={photos[0].url.replace(`v1/studio`,`e_trim/v1/studio`)} className={`w-full h-full absolute object-contain left-[0] top-[20px]`} />
+          </GridItem>
+        </div>
+      </GridItem>
+
+      <GridItem
+        className={`
+          grid-in-[var(--grid-in)]
           grid items-center
         `}
         style={{
@@ -81,7 +147,7 @@ export const ContentBlock = ({
         <Logo className='pl-3 h-full' />
       </GridItem>
 
-      <GridItem
+      {disclaimer && <GridItem
         className={`
           grid-in-[var(--grid-in)]
           flex h-full items-center justify-start
@@ -98,7 +164,7 @@ export const ContentBlock = ({
         >
           {disclaimer}
         </span>
-      </GridItem>
+      </GridItem>}
     </div>
       </>
     )

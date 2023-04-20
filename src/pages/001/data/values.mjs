@@ -8,16 +8,40 @@ export default {
 
   cta: `Visit www.tataplay.com \nOr contact your nearest dealer`,
 
-  disclaimer: `Price is inclusive of pack price and applicable NCF and taxes. Star Sports 1 Hindi channel is provided
-additionally as a special offer from 28th Mar’23 to 28th May’23. FTA channels provided through
-subscription of FTA Complimentary Pack and DD Base Pack at no additional cost. All terms and conditions of the subscription contract will apply, visit www.tataplay.com for details. Pack details as of 27th Mar’23.
-TATA®️ and TATA PLAY®️ are registered trademarks of Tata Sons Private Limited. Used under License by Tata Play Limited (Formerly known as Tata Sky Limited).`,
+    disclaimer: `Price is inclusive of pack price and applicable NCF and taxes. Star Sports 1 Hindi channel is provided
+  additionally as a special offer from 28th Mar’23 to 28th May’23. FTA channels provided through
+  subscription of FTA Complimentary Pack and DD Base Pack at no additional cost. All terms and conditions of the subscription contract will apply, visit www.tataplay.com for details. Pack details as of 27th Mar’23.
+  TATA®️ and TATA PLAY®️ are registered trademarks of Tata Sons Private Limited. Used under License by Tata Play Limited (Formerly known as Tata Sky Limited).`,
 
-  hero: {
-    name: `forest-image-three`,
+  photo1: {
+    name: `photo1a Sukh Mhanje Nakki Kai Asta`,
     description: null,
-    id: `63898c7b84829d08ff8a6f62`,
-    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/forest-image-three_l7omih`,
+    id: `64405aa14c347fc1b15d5ed5`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/kalt6kkqyeuar9fqzbdc`,
+    datasets: {},
+  },
+
+  photo2: {
+    name: `photo1b for maharastra ad 20_FEB_2023_star prawav4615_Revised`,
+    description: null,
+    id: `64405aa14c347fc1b15d5ed1`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/obqku7dbj1pohsikh4ry`,
+    datasets: {},
+  },
+
+  photo3: {
+    name: `photo1c for maharastra ad 19th_FEB_2023_STAR_3635`,
+    description: null,
+    id: `64405aa14c347fc1b15d5ed4`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/kiac3bzrio156ldgeizr`,
+    datasets: {},
+  },
+
+  photo4: {
+    name: `photo1d-HH-new-bats-man1`,
+    description: null,
+    id: `6440ba8a60b2737d5fef09ff`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/bppjo3aigy5ihawfl7qn`,
     datasets: {},
   },
 
@@ -50,6 +74,30 @@ TATA®️ and TATA PLAY®️ are registered trademarks of Tata Sons Private Limi
     description: null,
     id: `6440587a4c347fc1b15d5e84`,
     url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/hlw8ylalckioh05hnt1r`,
+    datasets: {},
+  },
+
+  partner5: {
+    name: `logo WB_Star_Gold_2`,
+    description: null,
+    id: `6440587a4c347fc1b15d5e83`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/d4osmgs94beimmrwrfke`,
+    datasets: {},
+  },
+
+  partner6: {
+    name: `logo Star_Plus new`,
+    description: null,
+    id: `6440587a4c347fc1b15d5e82`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/s1jiwfrrxwyyw73wtxop`,
+    datasets: {},
+  },
+
+  partner7: {
+    name: `logo SSHindi_HERO_VERT_OnWhite_RGB`,
+    description: null,
+    id: `6440587a4c347fc1b15d5e81`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/kvzrq5nk8ji9fd8dp6mi`,
     datasets: {},
   },
 }

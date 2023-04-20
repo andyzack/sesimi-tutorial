@@ -14,10 +14,11 @@ const Template = (props) => {
   // Ensure that props you destructure from useTemplate match those found in
   // data/values.mjs and data/config.mjs `fields`.
   const {
-    page: {headline, copy, cta, disclaimer, partner1, partner2, partner3, partner4, partner5, partner6, partner7},
+    page: {headline, copy, cta, disclaimer, photo1, photo2, photo3, photo4, partner1, partner2, partner3, partner4, partner5, partner6, partner7},
   } = useTemplate({page, ...props})
   // const animation = useAnimation(props)
 
+  const photos = [photo1, photo2, photo3, photo4]
   const partners = [partner1, partner2, partner3, partner4, partner5, partner6, partner7]
 
   return (
@@ -46,7 +47,7 @@ const Template = (props) => {
         <GridItem
           className={`grid-in-[1/1/-1/-1]`}
         >
-          <ContentBlock disclaimer={disclaimer}>
+          <ContentBlock photos={photos} disclaimer={disclaimer}>
             <Headline headline={headline} />
             <Copy copy={copy} className='text-[10.9pt] leading-tight' />
           </ContentBlock>
