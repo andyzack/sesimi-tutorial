@@ -29,10 +29,12 @@ export const ContentBlock = ({
       <>
       <div
       className={`
-        grid grid-areas-[var(--areas)] grid-rows-[var(--rows)] grid-cols-[var(--columns)] h-full w-full
+        grid h-full w-full
+        grid-areas-[var(--areas1)] grid-rows-[var(--rows1)] grid-cols-[var(--columns1)]
+        min-12/10:grid-areas-[var(--areas2)] min-12/10:grid-rows-[var(--rows2)] min-12/10:grid-cols-[var(--columns2)]
       `}
       style={{
-        '--areas': `
+        '--areas1': `
           " ◤   —   —   —   —  ◥ "
           " l  ..  ..  🉐  ..  ▍"
           " l  📓  🏷  👑  ..  ▍"
@@ -40,8 +42,19 @@ export const ContentBlock = ({
           " l  📓  👪  👪  ..  ▍"
           " ◣   ▂   ▂   ▂   ▂  ◢ "
         `,
-        '--rows': `10.8fr 7.1fr 30fr 21.2fr 139.7fr 41.7fr`,
-        '--columns': `2.6fr 7fr 30fr 110fr 7fr 2.6fr`,
+        '--rows1': `10.8fr 7.1fr 30fr 21.2fr 139.7fr 41.7fr`,
+        '--columns1': `2.6fr 7fr 30fr 110fr 7fr 2.6fr`,
+
+        '--areas2': `
+          " ◤   —   —  —   —   —   —  ◥ "
+          " l  ..  🉐  🏷  ..  ..  ..  ▍"
+          " l  📓  ..  🏷  👑  👑  ..  ▍"
+          " l  📓  👪  👪  👪  ..  ..  ▍"
+          " l  📓  👪  👪  👪  ..  ..  ▍"
+          " ◣   ▂   ▂  ▂   ▂   ▂   ▂  ◢ "
+        `,
+        '--rows2': `18.4fr 8.8fr 35.5fr 187.6fr`,
+        '--columns2': `6.4fr 8.4fr 95.6fr 44.4fr 70.2fr 90.2fr 6.6fr 6.4fr`,
       }}
     >
       <GridItem
