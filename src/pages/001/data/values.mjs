@@ -52,28 +52,4 @@ TATA®️ and TATA PLAY®️ are registered trademarks of Tata Sons Private Limi
     url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/hlw8ylalckioh05hnt1r`,
     datasets: {},
   },
-
-  partner5: {
-    name: `logo WB_Star_Gold_2`,
-    description: null,
-    id: `6440587a4c347fc1b15d5e83`,
-    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/d4osmgs94beimmrwrfke`,
-    datasets: {},
-  },
-
-  partner6: {
-    name: `logo Star_Plus new`,
-    description: null,
-    id: `6440587a4c347fc1b15d5e82`,
-    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/s1jiwfrrxwyyw73wtxop`,
-    datasets: {},
-  },
-
-  partner7: {
-    name: `logo SSHindi_HERO_VERT_OnWhite_RGB`,
-    description: null,
-    id: `6440587a4c347fc1b15d5e81`,
-    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/kvzrq5nk8ji9fd8dp6mi`,
-    datasets: {},
-  },
 }
