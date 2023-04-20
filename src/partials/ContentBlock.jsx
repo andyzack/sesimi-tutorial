@@ -3,6 +3,10 @@ import { GridItem, ResponsiveImage as Img } from '@myadbox/exoplanet-toolkit'
 import Price from '@/components/Price'
 import Logo from '@/components/Logo'
 
+const hasUserCrop = (/** @type {string} */ src) => {
+  return src.includes(`c_crop`)
+}
+
 /**
 * This is the headline component
 * @param {object} props - all available props
@@ -83,37 +87,59 @@ export const ContentBlock = ({
             grid grid-rows-[var(--rows)] grid-cols-[var(--columns)] h-full w-full
           `}
           style={{
-            '--rows': `1fr 0.1fr 0.075fr 0.025fr`,
-            '--columns': `repeat(8, 1fr)`,
+            '--rows': `repeat(3, 0.05fr) 1fr repeat(9, 0.05fr)`,
+            '--columns': `repeat(32, 1fr)`,
           }}
         >
-
           <GridItem
+            data-hitarea="photo1"
             className={`
-              grid-in-[var(--grid-in)]
+              grid-in-[var(--grid-in)] z-10
             `}
             style={{
-              '--grid-in': `1 / 1 / -3 / -4`,
+              '--grid-in': `1 / 1 / -8 / -14`,
             }}
           >
             <Img
-              src={photos[3].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
+              src={photos[0].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
               className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)]`}
               style={{
-                '--photo-height': `${photos[3].photoHeight}%`,
-                '--photo-vertical': `${photos[3].photoVertical}px`,
-                '--photo-horizontal': `${photos[3].photoHorizontal}px`,
-                '--photo-rotate': `${photos[3].photoRotate}deg`,
+                '--photo-height': `${photos[0].photoHeight}%`,
+                '--photo-vertical': `${photos[0].photoVertical}px`,
+                '--photo-horizontal': `${photos[0].photoHorizontal}px`,
+                '--photo-rotate': `${photos[0].photoRotate}deg`,
               }}
             />
           </GridItem>
 
           <GridItem
+            data-hitarea="photo2"
             className={`
-              grid-in-[var(--grid-in)]
+              grid-in-[var(--grid-in)] z-20
             `}
             style={{
-              '--grid-in': `1 / 4 / -3 / -1`,
+              '--grid-in': `2 / 6 / -3 / -10`,
+            }}
+          >
+            <Img
+              src={photos[1].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)]`}
+              style={{
+                '--photo-height': `${photos[1].photoHeight}%`,
+                '--photo-vertical': `${photos[1].photoVertical}px`,
+                '--photo-horizontal': `${photos[1].photoHorizontal}px`,
+                '--photo-rotate': `${photos[1].photoRotate}deg`,
+              }}
+            />
+          </GridItem>
+
+          <GridItem
+            data-hitarea="photo3"
+            className={`
+              grid-in-[var(--grid-in)] z-30
+            `}
+            style={{
+              '--grid-in': `3 / 10 / -1 / -6`,
             }}
           >
             <Img
@@ -129,41 +155,22 @@ export const ContentBlock = ({
           </GridItem>
 
           <GridItem
+            data-hitarea="photo4"
             className={`
-              grid-in-[var(--grid-in)]
+              grid-in-[var(--grid-in)] z-20
             `}
             style={{
-              '--grid-in': `1 / 1 / -2 / -4`,
+              '--grid-in': `4 / 14 / -5 / -2`,
             }}
           >
             <Img
-              src={photos[1].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
+              src={photos[3].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
               className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)]`}
               style={{
-                '--photo-height': `${photos[1].photoHeight}%`,
-                '--photo-vertical': `${photos[1].photoVertical}px`,
-                '--photo-horizontal': `${photos[1].photoHorizontal}px`,
-                '--photo-rotate': `${photos[1].photoRotate}deg`,
-              }}
-            />
-          </GridItem>
-          
-          <GridItem
-            className={`
-              grid-in-[var(--grid-in)]
-            `}
-            style={{
-              '--grid-in': `1 / 3 / -1 / -1`,
-            }}
-          >
-            <Img
-              src={photos[0].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
-              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)]`}
-              style={{
-                '--photo-height': `${photos[0].photoHeight}%`,
-                '--photo-vertical': `${photos[0].photoVertical}px`,
-                '--photo-horizontal': `${photos[0].photoHorizontal}px`,
-                '--photo-rotate': `${photos[0].photoRotate}deg`,
+                '--photo-height': `${photos[3].photoHeight}%`,
+                '--photo-vertical': `${photos[3].photoVertical}px`,
+                '--photo-horizontal': `${photos[3].photoHorizontal}px`,
+                '--photo-rotate': `${photos[3].photoRotate}deg`,
               }}
             />
           </GridItem>

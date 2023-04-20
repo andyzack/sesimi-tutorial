@@ -8,22 +8,22 @@ export default {
 
   cta: `Visit www.tataplay.com \nOr contact your nearest dealer`,
 
-    disclaimer: `Price is inclusive of pack price and applicable NCF and taxes. Star Sports 1 Hindi channel is provided
+  disclaimer: `Price is inclusive of pack price and applicable NCF and taxes. Star Sports 1 Hindi channel is provided
   additionally as a special offer from 28th Mar’23 to 28th May’23. FTA channels provided through
   subscription of FTA Complimentary Pack and DD Base Pack at no additional cost. All terms and conditions of the subscription contract will apply, visit www.tataplay.com for details. Pack details as of 27th Mar’23.
   TATA®️ and TATA PLAY®️ are registered trademarks of Tata Sons Private Limited. Used under License by Tata Play Limited (Formerly known as Tata Sky Limited).`,
 
   photo1: {
-    name: `photo1a Sukh Mhanje Nakki Kai Asta`,
+    name: `photo1d HH new bats man1`,
     description: null,
-    id: `64405aa14c347fc1b15d5ed5`,
-    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/kalt6kkqyeuar9fqzbdc`,
+    id: `64405c644c347fc1b15d5f25`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/z25h0rwghq6a2ewumehe`,
     datasets: {},
   },
-  photo1Height:100, 
-  photo1Vertical:20, 
-  photo1Horizontal:0,
-  photo1Rotate:0,
+  photo1Height: 100,
+  photo1Vertical: 46,
+  photo1Horizontal: -46,
+  photo1Rotate: -22,
 
   photo2: {
     name: `photo1b for maharastra ad 20_FEB_2023_star prawav4615_Revised`,
@@ -32,34 +32,36 @@ export default {
     url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/obqku7dbj1pohsikh4ry`,
     datasets: {},
   },
-  photo2Height:92, 
-  photo2Vertical:60, 
-  photo2Horizontal:-16,
-  photo2Rotate:0,
-
+  photo2Height: 100,
+  photo2Vertical: 54,
+  photo2Horizontal: -72,
+  photo2Rotate: 0,
+  
   photo3: {
+    name: `photo1a Sukh Mhanje Nakki Kai Asta`,
+    description: null,
+    id: `64405aa14c347fc1b15d5ed5`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/kalt6kkqyeuar9fqzbdc`,
+    datasets: {},
+  },
+  photo3Height: 100,
+  photo3Vertical: 12,
+  photo3Horizontal: 30,
+  photo3Rotate: 0,
+
+  photo4: {
     name: `photo1c for maharastra ad 19th_FEB_2023_STAR_3635`,
     description: null,
     id: `64405aa14c347fc1b15d5ed4`,
     url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/kiac3bzrio156ldgeizr`,
     datasets: {},
   },
-  photo3Height:96,
-  photo3Vertical:30,
-  photo3Horizontal:0, 
-  photo3Rotate:6,
+  photo4Height: 100,
+  photo4Vertical: 4,
+  photo4Horizontal: 16,
+  photo4Rotate: 6,
 
-  photo4: {
-    name: `photo1d-HH-new-bats-man1`,
-    description: null,
-    id: `6440ba8a60b2737d5fef09ff`,
-    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/bppjo3aigy5ihawfl7qn`,
-    datasets: {},
-  },
-  photo4Height:82,
-  photo4Vertical:0,
-  photo4Horizontal:-40, 
-  photo4Rotate:0,
+
 
   partner1: {
     name: `logo Pravah Picture`,

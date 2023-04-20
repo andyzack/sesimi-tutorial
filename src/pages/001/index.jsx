@@ -114,7 +114,7 @@ const Template = (props) => {
         </GridItem>
 
         <GridItem
-          className={`grid-in-[var(--grid-in)]`}
+          className={`grid-in-[var(--grid-in)] z-50`}
           style={{
             '--grid-in': `🦶`,
           }}
