@@ -31,12 +31,78 @@ export default {
     }),
 
     createField.asset({
-      name: `photoshot`,
+      name: `partner1`,
       required: true,
       options: {
-        label: `Photoshot`,
-        details: `This is a photo image`,
-        limitTo: [`ogilvy-test`],
+        label: `Partner 1`,
+        details: `This is a Partner image`,
+        limitTo: [`star tv logo`],
+        controls: [`crop`, `upload`], // optional
+      },
+    }),
+
+    createField.asset({
+      name: `partner2`,
+      required: true,
+      options: {
+        label: `Partner 2`,
+        details: `This is a Partner image`,
+        limitTo: [`star tv logo`],
+        controls: [`crop`, `upload`], // optional
+      },
+    }),
+
+    createField.asset({
+      name: `partner3`,
+      required: true,
+      options: {
+        label: `Partner 3`,
+        details: `This is a Partner image`,
+        limitTo: [`star tv logo`],
+        controls: [`crop`, `upload`], // optional
+      },
+    }),
+
+    createField.asset({
+      name: `partner4`,
+      required: true,
+      options: {
+        label: `Partner 4`,
+        details: `This is a Partner image`,
+        limitTo: [`star tv logo`],
+        controls: [`crop`, `upload`], // optional
+      },
+    }),
+
+    createField.asset({
+      name: `partner5`,
+      required: true,
+      options: {
+        label: `Partner 5`,
+        details: `This is a Partner image`,
+        limitTo: [`star tv logo`],
+        controls: [`crop`, `upload`], // optional
+      },
+    }),
+
+    createField.asset({
+      name: `partner6`,
+      required: true,
+      options: {
+        label: `Partner 6`,
+        details: `This is a Partner image`,
+        limitTo: [`star tv logo`],
+        controls: [`crop`, `upload`], // optional
+      },
+    }),
+
+    createField.asset({
+      name: `partner7`,
+      required: true,
+      options: {
+        label: `Partner 7`,
+        details: `This is a Partner image`,
+        limitTo: [`star tv logo`],
         controls: [`crop`, `upload`], // optional
       },
     }),

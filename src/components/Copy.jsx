@@ -4,7 +4,7 @@ export const Copy = ({copy = ``, className = ``, style = {}}) => {
   return (
     <>
       <div
-        className={`text-lg font-medium ${className}`}
+        className={`text-[]] font-medium ${className} whitespace-break-spaces`}
         style={{
           ...style
         }}
