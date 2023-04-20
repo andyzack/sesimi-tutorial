@@ -20,6 +20,10 @@ export default {
     url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/kalt6kkqyeuar9fqzbdc`,
     datasets: {},
   },
+  photo1Height:100, 
+  photo1Vertical:20, 
+  photo1Horizontal:0,
+  photo1Rotate:0,
 
   photo2: {
     name: `photo1b for maharastra ad 20_FEB_2023_star prawav4615_Revised`,
@@ -28,6 +32,10 @@ export default {
     url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/obqku7dbj1pohsikh4ry`,
     datasets: {},
   },
+  photo2Height:92, 
+  photo2Vertical:60, 
+  photo2Horizontal:-16,
+  photo2Rotate:0,
 
   photo3: {
     name: `photo1c for maharastra ad 19th_FEB_2023_STAR_3635`,
@@ -36,6 +44,10 @@ export default {
     url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/kiac3bzrio156ldgeizr`,
     datasets: {},
   },
+  photo3Height:96,
+  photo3Vertical:30,
+  photo3Horizontal:0, 
+  photo3Rotate:6,
 
   photo4: {
     name: `photo1d-HH-new-bats-man1`,
@@ -44,6 +56,10 @@ export default {
     url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/studio/bppjo3aigy5ihawfl7qn`,
     datasets: {},
   },
+  photo4Height:82,
+  photo4Vertical:0,
+  photo4Horizontal:-40, 
+  photo4Rotate:0,
 
   partner1: {
     name: `logo Pravah Picture`,

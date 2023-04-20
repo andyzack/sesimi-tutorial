@@ -24,6 +24,7 @@ export const ContentBlock = ({
     style = {},
     ...props
 }) => {
+    console.log(photos)
     return (
       <>
       <div
@@ -57,6 +58,7 @@ export const ContentBlock = ({
       <GridItem
         className={`
           grid-in-[var(--grid-in)]
+          overflow-hidden
         `}
         style={{
           '--grid-in': `👪 / 👪 / -1 / 👪`,
@@ -81,7 +83,16 @@ export const ContentBlock = ({
               '--grid-in': `1 / 1 / -3 / -4`,
             }}
           >
-            <Img src={photos[3].url.replace(`v1/studio`,`e_trim/v1/studio`)} className={`w-full h-[82%] absolute object-contain left-[-40px] top-[0]`} />
+            <Img
+              src={photos[3].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)]`}
+              style={{
+                '--photo-height': `${photos[3].photoHeight}%`,
+                '--photo-vertical': `${photos[3].photoVertical}px`,
+                '--photo-horizontal': `${photos[3].photoHorizontal}px`,
+                '--photo-rotate': `${photos[3].photoRotate}deg`,
+              }}
+            />
           </GridItem>
 
           <GridItem
@@ -92,7 +103,16 @@ export const ContentBlock = ({
               '--grid-in': `1 / 4 / -3 / -1`,
             }}
           >
-            <Img src={photos[2].url.replace(`v1/studio`,`e_trim/v1/studio`)} className={`w-full h-[96%] absolute object-contain left-[0] top-[30px] rotate-[6deg]`} />
+            <Img
+              src={photos[2].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)]`}
+              style={{
+                '--photo-height': `${photos[2].photoHeight}%`,
+                '--photo-vertical': `${photos[2].photoVertical}px`,
+                '--photo-horizontal': `${photos[2].photoHorizontal}px`,
+                '--photo-rotate': `${photos[2].photoRotate}deg`,
+              }}
+            />
           </GridItem>
 
           <GridItem
@@ -103,7 +123,16 @@ export const ContentBlock = ({
               '--grid-in': `1 / 1 / -2 / -4`,
             }}
           >
-            <Img src={photos[1].url.replace(`v1/studio`,`e_trim/v1/studio`)} className={`w-full h-[92%] absolute object-contain left-[-6px] top-[60px]`} />
+            <Img
+              src={photos[1].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)]`}
+              style={{
+                '--photo-height': `${photos[1].photoHeight}%`,
+                '--photo-vertical': `${photos[1].photoVertical}px`,
+                '--photo-horizontal': `${photos[1].photoHorizontal}px`,
+                '--photo-rotate': `${photos[1].photoRotate}deg`,
+              }}
+            />
           </GridItem>
           
           <GridItem
@@ -114,7 +143,16 @@ export const ContentBlock = ({
               '--grid-in': `1 / 3 / -1 / -1`,
             }}
           >
-            <Img src={photos[0].url.replace(`v1/studio`,`e_trim/v1/studio`)} className={`w-full h-full absolute object-contain left-[0] top-[20px]`} />
+            <Img
+              src={photos[0].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)]`}
+              style={{
+                '--photo-height': `${photos[0].photoHeight}%`,
+                '--photo-vertical': `${photos[0].photoVertical}px`,
+                '--photo-horizontal': `${photos[0].photoHorizontal}px`,
+                '--photo-rotate': `${photos[0].photoRotate}deg`,
+              }}
+            />
           </GridItem>
         </div>
       </GridItem>
