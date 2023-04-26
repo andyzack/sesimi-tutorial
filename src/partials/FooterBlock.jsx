@@ -4,15 +4,17 @@ import {GridItem, ResponsiveImage as Img} from '@myadbox/exoplanet-toolkit'
 /**
  * This is the footer block
  * @param {object} props - all available props
- * @param {string} [props.cta] - copy details to display
- * @param {object} [props.partners] - canvas color to display
+ * @param {string} [props.cta] - cta to display
+ * @param {string} [props.footerHeadline] - footer headline to display
+ * @param {string} [props.footerCopy] - footer copy to display
+ * @param {object} [props.partners] - partners list to display
  * @param {string} [props.className] - css class names
  * @param {object} [props.style] - css inline style
  *
  * @returns {React.ReactElement} the template
  */
 
-export const FooterBlock = ({cta = ``, partners = {}, className = ``, style = {}, ...props}) => {
+export const FooterBlock = ({cta = ``, footerHeadline = ``, footerCopy = ``, partners = {}, className = ``, style = {}, ...props}) => {
 
   // Cleanup partners object
   const partnersList = partners = partners?.filter((item) => item != undefined)
@@ -80,8 +82,11 @@ export const FooterBlock = ({cta = ``, partners = {}, className = ``, style = {}
           }}
         >
           <GridItem className={`grid-in-[1/2/1/-2] flex items-center justify-center`} style={{alignItems: `center`,}}>
-            <div className="text-2xl font-medium">
-              Marathi Hindi Super Value Pack
+            <div
+              data-hitarea="footerHeadline"
+              className="text-2xl font-medium"
+            >
+              {footerHeadline}
               <div className={` border-b-2 border-primary w-24 m-auto pt-1`}></div>
             </div>
           </GridItem>
@@ -100,8 +105,10 @@ export const FooterBlock = ({cta = ``, partners = {}, className = ``, style = {}
               })}
             </div>
           </GridItem>
-          <GridItem className={`grid-in-[3/2/3/-2] flex items-start justify-end pt-2`}>
-            + 268 more channels including 9 Marathi Channels
+          <GridItem
+            className={`grid-in-[3/2/3/-2] flex items-start justify-end pt-2`}
+          >
+            {footerCopy}
           </GridItem>
         </div>
       </GridItem>

@@ -202,6 +202,22 @@ export default {
       },
     }),
 
+    createField.text({
+      name: `footerHeadline`,
+      options: {
+        label: `Footer headline`,
+        details: `This is a detail tooltip`,
+      },
+    }),
+
+    createField.text({
+      name: `footerCopy`,
+      options: {
+        label: `Footer copy`,
+        details: `This is a detail tooltip`,
+      },
+    }),
+
     createField.asset({
       name: `partner1`,
       required: true,

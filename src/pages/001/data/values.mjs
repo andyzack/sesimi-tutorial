@@ -54,6 +54,10 @@ export default {
 
   cta: `Visit www.tataplay.com \nOr contact your nearest dealer`,
 
+  footerHeadline: `Marathi Hindi Super Value Pack`,
+
+  footerCopy: `+ 268 more channels including 9 Marathi Channels`,
+
   partner1: {
     name: `logo Pravah Picture`,
     description: null,

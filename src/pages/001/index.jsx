@@ -39,6 +39,8 @@ const Template = (props) => {
       photo4Vertical,
       photo4Horizontal,
       photo4Rotate,
+      footerHeadline,
+      footerCopy,
       partner1,
       partner2,
       partner3,
@@ -119,7 +121,7 @@ const Template = (props) => {
             '--grid-in': `🦶`,
           }}
         >
-          <FooterBlock cta={cta} partners={partners} />
+          <FooterBlock cta={cta} footerHeadline={footerHeadline} footerCopy={footerCopy} partners={partners} />
         </GridItem>
       </div>
     </Body>
