@@ -15,6 +15,7 @@ export default {
   photo1Vertical: 46,
   photo1Horizontal: -46,
   photo1Rotate: -22,
+  photo1Layer: 1,
 
   photo2: {
     name: `photo1b for maharastra ad 20_FEB_2023_star prawav4615_Revised`,
@@ -27,6 +28,7 @@ export default {
   photo2Vertical: 54,
   photo2Horizontal: -72,
   photo2Rotate: 0,
+  photo2Layer: 2,
 
   photo3: {
     name: `photo1a Sukh Mhanje Nakki Kai Asta`,
@@ -39,6 +41,7 @@ export default {
   photo3Vertical: 12,
   photo3Horizontal: 30,
   photo3Rotate: 0,
+  photo3Layer: 3,
 
   photo4: {
     name: `photo1c for maharastra ad 19th_FEB_2023_STAR_3635`,
@@ -51,6 +54,7 @@ export default {
   photo4Vertical: 4,
   photo4Horizontal: 16,
   photo4Rotate: 6,
+  photo4Layer: 2,
 
   cta: `Visit www.tataplay.com \nOr contact your nearest dealer`,
 

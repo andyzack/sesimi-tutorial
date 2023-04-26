@@ -89,10 +89,11 @@ export const ContentBlock = ({
           <GridItem
             data-hitarea="photo1"
             className={`
-              grid-in-[var(--grid-in)] z-10
+              grid-in-[var(--grid-in)] z-[var(--z-index)]
             `}
             style={{
               '--grid-in': `1 / 1 / -8 / -14`,
+              '--z-index': photos[0].photoLayer,
             }}
           >
             <Img
@@ -110,10 +111,11 @@ export const ContentBlock = ({
           <GridItem
             data-hitarea="photo2"
             className={`
-              grid-in-[var(--grid-in)] z-20
+              grid-in-[var(--grid-in)] z-[var(--z-index)]
             `}
             style={{
               '--grid-in': `2 / 6 / -3 / -10`,
+              '--z-index': photos[1].photoLayer,
             }}
           >
             <Img
@@ -131,10 +133,11 @@ export const ContentBlock = ({
           <GridItem
             data-hitarea="photo3"
             className={`
-              grid-in-[var(--grid-in)] z-30
+              grid-in-[var(--grid-in)] z-[var(--z-index)]
             `}
             style={{
               '--grid-in': `3 / 10 / -1 / -6`,
+              '--z-index': photos[2].photoLayer,
             }}
           >
             <Img
@@ -152,10 +155,11 @@ export const ContentBlock = ({
           <GridItem
             data-hitarea="photo4"
             className={`
-              grid-in-[var(--grid-in)] z-20
+              grid-in-[var(--grid-in)] z-[var(--z-index)]
             `}
             style={{
               '--grid-in': `4 / 14 / -5 / -2`,
+              '--z-index': photos[3].photoLayer,
             }}
           >
             <Img

@@ -64,6 +64,20 @@ export default {
       },
     }),
 
+    createField.select({
+      name: `photo1Layer`,
+      options: {
+        label: `Photo 1 Layer`,
+        details: `Select the layer for photo 1`,
+        choices: [
+          {value: 1, label: `Layer 1`},
+          {value: 2, label: `Layer 2`},
+          {value: 3, label: `Layer 3`},
+          {value: 4, label: `Layer 4`},
+        ]
+      }
+    }),
+
     createField.asset({
       name: `photo2`,
       required: true,
@@ -105,6 +119,20 @@ export default {
         label: `Photo 2 rotate (deg)`,
         details: `Change this to rotate photo. Takes negative values for ani-clockwise rotation.`,
       },
+    }),
+
+    createField.select({
+      name: `photo2Layer`,
+      options: {
+        label: `Photo 2 Layer`,
+        details: `Select the layer for photo 2`,
+        choices: [
+          {value: 1, label: `Layer 1`},
+          {value: 2, label: `Layer 2`},
+          {value: 3, label: `Layer 3`},
+          {value: 4, label: `Layer 4`},
+        ]
+      }
     }),
 
     createField.asset({
@@ -150,6 +178,20 @@ export default {
       },
     }),
 
+    createField.select({
+      name: `photo3Layer`,
+      options: {
+        label: `Photo 3 Layer`,
+        details: `Select the layer for photo 3`,
+        choices: [
+          {value: 1, label: `Layer 1`},
+          {value: 2, label: `Layer 2`},
+          {value: 3, label: `Layer 3`},
+          {value: 4, label: `Layer 4`},
+        ]
+      }
+    }),
+
     createField.asset({
       name: `photo4`,
       required: true,
@@ -191,6 +233,20 @@ export default {
         label: `Photo 4 rotate (deg)`,
         details: `Change this to rotate photo. Takes negative values for ani-clockwise rotation.`,
       },
+    }),
+
+    createField.select({
+      name: `photo4Layer`,
+      options: {
+        label: `Photo 4 Layer`,
+        details: `Select the layer for photo 4`,
+        choices: [
+          {value: 1, label: `Layer 1`},
+          {value: 2, label: `Layer 2`},
+          {value: 3, label: `Layer 3`},
+          {value: 4, label: `Layer 4`},
+        ]
+      }
     }),
 
     createField.text({

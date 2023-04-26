@@ -14,7 +14,7 @@ import {GridItem, ResponsiveImage as Img} from '@myadbox/exoplanet-toolkit'
  * @returns {React.ReactElement} the template
  */
 
-export const FooterBlock = ({cta = ``, footerHeadline = ``, footerCopy = ``, partners = {}, className = ``, style = {}, ...props}) => {
+export const FooterBlock = ({cta = ``, footerHeadline = ``, footerCopy = ``, partners = {}, className = ``, style = {}}) => {
 
   // Cleanup partners object
   const partnersList = partners = partners?.filter((item) => item != undefined)
@@ -25,6 +25,7 @@ export const FooterBlock = ({cta = ``, footerHeadline = ``, footerCopy = ``, par
         grid-areas-[var(--areas)]
         grid-rows-[var(--rows1)] grid-cols-[var(--columns1)]
         min-12/10:grid-rows-[var(--rows2)] min-12/10:grid-cols-[var(--columns2)]
+        ${className}
       `}
       style={{
         '--areas': `
@@ -46,6 +47,7 @@ export const FooterBlock = ({cta = ``, footerHeadline = ``, footerCopy = ``, par
         `,
         '--rows2': `0 89fr 6.4fr 45.4fr 0`,
         '--columns2': `132.7fr 182fr 14.6fr`,
+        ...style,
       }}
     >
       <GridItem
