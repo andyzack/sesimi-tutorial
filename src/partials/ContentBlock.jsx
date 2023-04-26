@@ -3,10 +3,6 @@ import { GridItem, ResponsiveImage as Img } from '@myadbox/exoplanet-toolkit'
 import Price from '@/components/Price'
 import Logo from '@/components/Logo'
 
-const hasUserCrop = (/** @type {string} */ src) => {
-  return src.includes(`c_crop`)
-}
-
 /**
 * This is the headline component
 * @param {object} props - all available props
@@ -26,41 +22,41 @@ export const ContentBlock = ({
     disclaimer = ``,
     className = ``,
     style = {},
-    ...props
 }) => {
-    console.log(photos)
     return (
       <>
       <div
-      className={`
-        grid h-full w-full
-        grid-areas-[var(--areas1)] grid-rows-[var(--rows1)] grid-cols-[var(--columns1)]
-        min-12/10:grid-areas-[var(--areas2)] min-12/10:grid-rows-[var(--rows2)] min-12/10:grid-cols-[var(--columns2)]
-      `}
-      style={{
-        '--areas1': `
-          " ◤   —   —   —   —  ◥ "
-          " l  ..  ..  🉐  ..  ▍"
-          " l  📓  🏷  👑  ..  ▍"
-          " l  📓  ..  👑  ..  ▍"
-          " l  📓  👪  👪  ..  ▍"
-          " ◣   ▂   ▂   ▂   ▂  ◢ "
-        `,
-        '--rows1': `10.8fr 7.1fr 30fr 21.2fr 139.7fr 41.7fr`,
-        '--columns1': `2.6fr 7fr 30fr 110fr 7fr 2.6fr`,
+        className={`
+          grid h-full w-full overflow-hidden
+          grid-areas-[var(--areas1)] grid-rows-[var(--rows1)] grid-cols-[var(--columns1)]
+          min-12/10:grid-areas-[var(--areas2)] min-12/10:grid-rows-[var(--rows2)] min-12/10:grid-cols-[var(--columns2)]
+          ${className}
+        `}
+        style={{
+          '--areas1': `
+            " ◤   —   —   —   —  ◥ "
+            " l  ..  ..  🉐  ..  ▍"
+            " l  📓  🏷  👑  ..  ▍"
+            " l  📓  ..  👑  ..  ▍"
+            " l  📓  👪  👪  ..  ▍"
+            " ◣   ▂   ▂   ▂   ▂  ◢ "
+          `,
+          '--rows1': `10.8fr 7.1fr 30fr 21.2fr 139.7fr 41.7fr`,
+          '--columns1': `2.6fr 7fr 30fr 110fr 7fr 2.6fr`,
 
-        '--areas2': `
-          " ◤   —   —  —   —   —   —  ◥ "
-          " l  ..  🉐  🏷  ..  ..  ..  ▍"
-          " l  📓  ..  🏷  👑  👑  ..  ▍"
-          " l  📓  👪  👪  👪  ..  ..  ▍"
-          " l  ..  👪  👪  👪  ..  ..  ▍"
-          " ◣   ▂   ▂  ▂   ▂   ▂   ▂  ◢ "
-        `,
-        '--rows2': `18.4fr 8.8fr 35.5fr 164.8fr 22.9fr 0`,
-        '--columns2': `6.4fr 8.4fr 95.6fr 44.4fr 70.2fr 90.2fr 6.6fr 6.4fr`,
-      }}
-    >
+          '--areas2': `
+            " ◤   —   —   —   —   —   —  ◥ "
+            " l  ..  🉐  🏷  ..  ..  ..  ▍"
+            " l  📓  ..  🏷  👑  👑  ..  ▍"
+            " l  📓  👪  👪  👪  ..  ..  ▍"
+            " l  ..  👪  👪  👪  ..  ..  ▍"
+            " ◣   ▂   ▂   ▂   ▂   ▂   ▂  ◢ "
+          `,
+          '--rows2': `18.4fr 8.8fr 35.5fr 164.8fr 22.9fr 0`,
+          '--columns2': `6.4fr 8.4fr 95.6fr 44.4fr 70.2fr 90.2fr 6.6fr 6.4fr`,
+          ...style
+        }}
+      >
       <GridItem
         className={`
           grid-in-[var(--grid-in)]
@@ -75,7 +71,6 @@ export const ContentBlock = ({
       <GridItem
         className={`
           grid-in-[var(--grid-in)]
-          overflow-hidden
         `}
         style={{
           '--grid-in': `👪 / 👪 / -1 / 👪`,

@@ -44,7 +44,7 @@ export default {
     createField.number({
       name: `photo1Height`,
       options: {
-        label: `Photo 1 height adjustment (%)`,
+        label: `Photo 1 size adjustment (%)`,
         details: `Change this to scale photo size up or down.`,
       },
     }),
@@ -87,7 +87,7 @@ export default {
     createField.number({
       name: `photo2Height`,
       options: {
-        label: `Photo 2 height adjustment (%)`,
+        label: `Photo 2 size adjustment (%)`,
         details: `Change this to scale photo size up or down.`,
       },
     }),
@@ -130,7 +130,7 @@ export default {
     createField.number({
       name: `photo3Height`,
       options: {
-        label: `Photo 3 height adjustment (%)`,
+        label: `Photo 3 size adjustment (%)`,
         details: `Change this to scale photo size up or down.`,
       },
     }),
@@ -173,7 +173,7 @@ export default {
     createField.number({
       name: `photo4Height`,
       options: {
-        label: `Photo 4 height adjustment (%)`,
+        label: `Photo 4 size adjustment (%)`,
         details: `Change this to scale photo size up or down.`,
       },
     }),
