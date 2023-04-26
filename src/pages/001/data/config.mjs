@@ -21,15 +21,6 @@ export default {
       },
     }),
 
-    createField.text({
-      name: `cta`,
-      required: true,
-      options: {
-        label: `CTA`,
-        details: `This is a detail tooltip`,
-      },
-    }),
-
     createField.asset({
       name: `photo1`,
       required: true,
@@ -199,6 +190,15 @@ export default {
       options: {
         label: `Photo 4 rotate (deg)`,
         details: `Change this to rotate photo. Takes negative values for ani-clockwise rotation.`,
+      },
+    }),
+
+    createField.text({
+      name: `cta`,
+      required: true,
+      options: {
+        label: `CTA`,
+        details: `This is a detail tooltip`,
       },
     }),
 

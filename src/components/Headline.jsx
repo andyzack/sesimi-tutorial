@@ -4,6 +4,7 @@ export const Headline = ({headline = ``, className = ``, style = {}}) => {
   return (
     <>
       <h1
+        data-hitarea="headline"
         className={`text-4xl leading-10 font-semibold whitespace-break-spaces uppercase ${className}`}
         style={{
           ...style
