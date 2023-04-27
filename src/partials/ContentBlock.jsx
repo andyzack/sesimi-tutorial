@@ -41,8 +41,8 @@ export const ContentBlock = ({
             " l  📓  👪  👪  ..  ▍"
             " ◣   ▂   ▂   ▂   ▂  ◢ "
           `,
-          '--rows1': `10.8fr 7.1fr 30fr 21.2fr 139.7fr 41.7fr`,
-          '--columns1': `2.6fr 7fr 30fr 110fr 7fr 2.6fr`,
+          '--rows1': `10.8fr 2.5em 11em 21.2fr 139.7fr 41.7fr`,
+          '--columns1': `2.6fr 7fr 11em 110fr 7fr 2.6fr`,
 
           '--areas2': `
             " ◤   —   —   —   —   —   —  ◥ "
@@ -52,8 +52,8 @@ export const ContentBlock = ({
             " l  ..  👪  👪  👪  ..  ..  ▍"
             " ◣   ▂   ▂   ▂   ▂   ▂   ▂  ◢ "
           `,
-          '--rows2': `18.4fr 8.8fr 35.5fr 164.8fr 22.9fr 0`,
-          '--columns2': `6.4fr 8.4fr 95.6fr 44.4fr 70.2fr 90.2fr 6.6fr 6.4fr`,
+          '--rows2': `18.4fr 2em 9em 164.8fr 22.9fr 0`,
+          '--columns2': `6.4fr 8.4fr 95.6fr 11em 70.2fr 90.2fr 6.6fr 6.4fr`,
           ...style
         }}
       >
