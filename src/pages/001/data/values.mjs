@@ -1,8 +1,12 @@
 // @ts-check
 export default {
   headline: `WELCOME THE STAR \nPARIVAAR TO YOUR FAMILY`,
+  headlineSize: `2.25`,
+  headlineTracking: `0`,
 
   copy: `Watch your favorite shows of Star Pravah and Star Plus and now enjoy the exciting cricket action of Star Sports!\nAll of this with the Tata Play Marathi Hindi Super Value Pack.`,
+  copySize: `1`,
+  copyTracking: `0`,
 
   photo1: {
     name: `photo1d HH new bats man1`,
@@ -57,10 +61,16 @@ export default {
   photo4Layer: 2,
 
   cta: `Visit www.tataplay.com \nOr contact your nearest dealer`,
+  ctaSize: ``,
+  ctaTracking: `0`,
 
   footerHeadline: `Marathi Hindi Super Value Pack`,
+  footerHeadlineSize: `1.5`,
+  footerHeadlineTracking: `0`,
 
   footerCopy: `+ 268 more channels including 9 Marathi Channels`,
+  footerCopySize: `1`,
+  footerCopyTracking: `0`,
 
   partner1: {
     name: `logo Pravah Picture`,
@@ -122,4 +132,6 @@ export default {
   additionally as a special offer from 28th Mar’23 to 28th May’23. FTA channels provided through
   subscription of FTA Complimentary Pack and DD Base Pack at no additional cost. All terms and conditions of the subscription contract will apply, visit www.tataplay.com for details. Pack details as of 27th Mar’23.
   TATA®️ and TATA PLAY®️ are registered trademarks of Tata Sons Private Limited. Used under License by Tata Play Limited (Formerly known as Tata Sky Limited).`,
+  disclaimerSize: `6`,
+  disclaimerTracking: `0`,
 }

@@ -4,9 +4,9 @@ import {GridItem, ResponsiveImage as Img} from '@myadbox/exoplanet-toolkit'
 /**
  * This is the footer block
  * @param {object} props - all available props
- * @param {string} [props.cta] - cta to display
- * @param {string} [props.footerHeadline] - footer headline to display
- * @param {string} [props.footerCopy] - footer copy to display
+ * @param {object} [props.cta] - cta to display
+ * @param {object} [props.footerHeadline] - footer headline to display
+ * @param {object} [props.footerCopy] - footer copy to display
  * @param {object} [props.partners] - partners list to display
  * @param {string} [props.className] - css class names
  * @param {object} [props.style] - css inline style
@@ -14,7 +14,7 @@ import {GridItem, ResponsiveImage as Img} from '@myadbox/exoplanet-toolkit'
  * @returns {React.ReactElement} the template
  */
 
-export const FooterBlock = ({cta = ``, footerHeadline = ``, footerCopy = ``, partners = {}, className = ``, style = {}}) => {
+export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, partners = {}, className = ``, style = {}}) => {
 
   // Cleanup partners object
   const partnersList = partners = partners?.filter((item) => item != undefined)
@@ -86,9 +86,13 @@ export const FooterBlock = ({cta = ``, footerHeadline = ``, footerCopy = ``, par
           <GridItem className={`grid-in-[1/2/1/-2] flex items-center justify-center`} style={{alignItems: `center`,}}>
             <div
               data-hitarea="footerHeadline"
-              className="text-2xl font-medium"
+              className={`font-medium ${footerHeadline.size ? `text-[length:var(--font-size)]` : `text-2xl`} tracking-[--tracking]`}
+              style={{
+                '--font-size': `${footerHeadline.size? footerHeadline.size + `rem` : ``}`,
+                '--tracking': `${footerHeadline.tracking ? footerHeadline.tracking * 0.01 : 0}em`,
+              }}
             >
-              {footerHeadline}
+              {footerHeadline.text}
               <div className={` border-b-2 border-primary w-24 m-auto pt-1`}></div>
             </div>
           </GridItem>
@@ -108,9 +112,13 @@ export const FooterBlock = ({cta = ``, footerHeadline = ``, footerCopy = ``, par
             </div>
           </GridItem>
           <GridItem
-            className={`grid-in-[3/2/3/-2] flex items-start justify-end pt-2`}
+            className={`grid-in-[3/2/3/-2] flex items-start justify-end pt-2 ${footerCopy.size ? `text-[length:var(--font-size)]` : `text-base`} tracking-[--tracking]`}
+            style={{
+              '--font-size': `${footerCopy.size? footerCopy.size + `rem` : ``}`,
+              '--tracking': `${footerCopy.tracking ? footerCopy.tracking * 0.01 : 0}em`,
+            }}
           >
-            {footerCopy}
+            {footerCopy.text}
           </GridItem>
         </div>
       </GridItem>

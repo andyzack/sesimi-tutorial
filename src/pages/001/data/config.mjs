@@ -11,6 +11,20 @@ export default {
         details: `This is a detail tooltip`,
       },
     }),
+    createField.number({
+      name: `headlineSize`,
+      options: {
+        label: `Headline font size adjustment (rem)`,
+        details: `Change this to scale font size up or down.`,
+      },
+    }),
+    createField.number({
+      name: `headlineTracking`,
+      options: {
+        label: `Headline tracking adjustment (tracking value * 0.01em)`,
+        details: `Change this to scale font tracking up or down.`,
+      },
+    }),
 
     createField.text({
       name: `copy`,
@@ -18,6 +32,20 @@ export default {
       options: {
         label: `Copy`,
         details: `This is a detail tooltip`,
+      },
+    }),
+    createField.number({
+      name: `copySize`,
+      options: {
+        label: `Copy font size adjustment (rem)`,
+        details: `Change this to scale font size up or down.`,
+      },
+    }),
+    createField.number({
+      name: `copyTracking`,
+      options: {
+        label: `Copy tracking adjustment (tracking value * 0.01em)`,
+        details: `Change this to scale font tracking up or down.`,
       },
     }),
 
@@ -257,6 +285,20 @@ export default {
         details: `This is a detail tooltip`,
       },
     }),
+    createField.number({
+      name: `ctaSize`,
+      options: {
+        label: `CTA font size adjustment (rem)`,
+        details: `Change this to scale font size up or down.`,
+      },
+    }),
+    createField.number({
+      name: `ctaTracking`,
+      options: {
+        label: `CTA tracking adjustment (tracking value * 0.01em)`,
+        details: `Change this to scale font tracking up or down.`,
+      },
+    }),
 
     createField.text({
       name: `footerHeadline`,
@@ -265,12 +307,40 @@ export default {
         details: `This is a detail tooltip`,
       },
     }),
+    createField.number({
+      name: `footerHeadlineSize`,
+      options: {
+        label: `Footer headline font size adjustment (rem)`,
+        details: `Change this to scale font size up or down.`,
+      },
+    }),
+    createField.number({
+      name: `footerHeadlineTracking`,
+      options: {
+        label: `Footer headline tracking adjustment (tracking value * 0.01em)`,
+        details: `Change this to scale font tracking up or down.`,
+      },
+    }),
 
     createField.text({
       name: `footerCopy`,
       options: {
         label: `Footer copy`,
         details: `This is a detail tooltip`,
+      },
+    }),
+    createField.number({
+      name: `footerCopySize`,
+      options: {
+        label: `Footer copy font size adjustment (rem)`,
+        details: `Change this to scale font size up or down.`,
+      },
+    }),
+    createField.number({
+      name: `footerCopyTracking`,
+      options: {
+        label: `Footer copy tracking adjustment (tracking value * 0.01em)`,
+        details: `Change this to scale font tracking up or down.`,
       },
     }),
 
@@ -357,6 +427,20 @@ export default {
       options: {
         label: `Disclaimer`,
         details: `This is a detail tooltip`,
+      },
+    }),
+    createField.number({
+      name: `disclaimerSize`,
+      options: {
+        label: `Disclaimer font size adjustment (px)`,
+        details: `Change this to scale font size up or down.`,
+      },
+    }),
+    createField.number({
+      name: `disclaimerTracking`,
+      options: {
+        label: `Disclaimer tracking adjustment (tracking value * 0.01em)`,
+        details: `Change this to scale font tracking up or down.`,
       },
     }),
   ],

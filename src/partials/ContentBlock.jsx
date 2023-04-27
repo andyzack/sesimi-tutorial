@@ -8,7 +8,7 @@ import Logo from '@/components/Logo'
 * @param {object} props - all available props
 * @param {string} [props.copy] - copy details to display
 * @param {object} [props.photos] - sub headline details to display
-* @param {string} [props.disclaimer] - canvas color to display
+* @param {object} [props.disclaimer] - disclaimer details to display
 * @param {string} [props.className] - css class names
 * @param {object} [props.style] - css inline style
 * @param {React.ReactNode} [props.children] - children to render
@@ -214,12 +214,14 @@ export const ContentBlock = ({
         }}
       >
         <span
-          className={`absolute left-0 bottom-0 text-[4.58pt] leading-[1] -rotate-90 w-auto min-12/10:w-1/2`}
+          className={`absolute left-0 bottom-0 text-[length:var(--font-size)] tracking-[--tracking] leading-[1] -rotate-90 w-auto min-12/10:w-1/2`}
           style={{
             transformOrigin: `0 0`,
+            '--font-size': `${disclaimer.size? disclaimer.size : 6}px`,
+            '--tracking': `${disclaimer.tracking ? disclaimer.tracking * 0.01 : 0}em`,
           }}
         >
-          {disclaimer}
+          {disclaimer.text}
         </span>
       </GridItem>}
     </div>

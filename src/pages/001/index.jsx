@@ -16,9 +16,11 @@ const Template = (props) => {
   const {
     page: {
       headline,
+      headlineSize,
+      headlineTracking,
       copy,
-      cta,
-      disclaimer,
+      copySize,
+      copyTracking,
       photo1,
       photo1Height,
       photo1Vertical,
@@ -43,8 +45,15 @@ const Template = (props) => {
       photo4Horizontal,
       photo4Rotate,
       photo4Layer,
+      cta,
+      ctaSize,
+      ctaTracking,
       footerHeadline,
+      footerHeadlineSize,
+      footerHeadlineTracking,
       footerCopy,
+      footerCopySize,
+      footerCopyTracking,
       partner1,
       partner2,
       partner3,
@@ -52,6 +61,9 @@ const Template = (props) => {
       partner5,
       partner6,
       partner7,
+      disclaimer,
+      disclaimerSize,
+      disclaimerTracking,
     },
   } = useTemplate({page, ...props})
   // const animation = useAnimation(props)
@@ -92,6 +104,42 @@ const Template = (props) => {
   ]
   const partners = [partner1, partner2, partner3, partner4, partner5, partner6, partner7]
 
+  const headlineObj = {
+    text: headline,
+    size: headlineSize,
+    tracking: headlineTracking,
+  }
+
+  const copyObj = {
+    text: copy,
+    size: copySize,
+    tracking: copyTracking,
+  }
+
+  const ctaObj = {
+    text: cta,
+    size: ctaSize,
+    tracking: ctaTracking,
+  }
+
+  const footerHeadlineObj = {
+    text: footerHeadline,
+    size: footerHeadlineSize,
+    tracking: footerHeadlineTracking,
+  }
+
+  const footerCopyObj = {
+    text: footerCopy,
+    size: footerCopySize,
+    tracking: footerCopyTracking,
+  }
+
+  const disclaimerObj = {
+    text: disclaimer,
+    size: disclaimerSize,
+    tracking: disclaimerTracking,
+  }
+
   return (
     <Body
       // animation={animation}
@@ -117,9 +165,9 @@ const Template = (props) => {
         }}
       >
         <GridItem className={`grid-in-[1/1/-1/-1]`}>
-          <ContentBlock photos={photos} disclaimer={disclaimer}>
-            <Headline headline={headline} />
-            <Copy copy={copy} className="text-[10.9pt] leading-tight" />
+          <ContentBlock photos={photos} disclaimer={disclaimerObj}>
+            <Headline headline={headlineObj} />
+            <Copy copy={copyObj} className="text-[10.9pt] leading-tight" />
           </ContentBlock>
         </GridItem>
 
@@ -129,7 +177,7 @@ const Template = (props) => {
             '--grid-in': `🦶`,
           }}
         >
-          <FooterBlock cta={cta} footerHeadline={footerHeadline} footerCopy={footerCopy} partners={partners} />
+          <FooterBlock cta={ctaObj} footerHeadline={footerHeadlineObj} footerCopy={footerCopyObj} partners={partners} />
         </GridItem>
       </div>
     </Body>
