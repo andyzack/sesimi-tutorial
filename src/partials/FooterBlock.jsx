@@ -16,8 +16,8 @@ import {GridItem, ResponsiveImage as Img} from '@myadbox/exoplanet-toolkit'
 
 export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, partners = {}, className = ``, style = {}}) => {
 
-  // Cleanup partners object
-  const partnersList = partners = partners?.filter((item) => item != undefined)
+  // Cleanup partners object - filter out undefined and no-logo
+  const partnersList = partners = partners?.filter((item) => item != undefined).filter((item) => !item.name.includes(`no-logo`))
 
   return (
     <div

@@ -92,8 +92,6 @@ const Template = (props) => {
     },
   }
 
-  console.log(fontList[fontChoice].fontFamily || fontList[`english`].fontFamily)
-
   const photos = [
     {
       photoAsset: photo1,
