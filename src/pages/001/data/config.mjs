@@ -71,7 +71,8 @@ export default {
         label: `Photo 1`,
         details: `This is a photo shot image1`,
         limitTo: [`star tv celebrities`],
-        controls: [`crop`, `upload`], // optional
+        view: `grid`,
+        controls: [`upload`],
       },
     }),
 
@@ -128,7 +129,8 @@ export default {
         label: `Photo 2`,
         details: `This is a photo shot image2`,
         limitTo: [`star tv celebrities`],
-        controls: [`crop`, `upload`], // optional
+        view: `grid`,
+        controls: [`upload`],
       },
     }),
 
@@ -185,7 +187,8 @@ export default {
         label: `Photo 3`,
         details: `This is a photo shot image3`,
         limitTo: [`star tv celebrities`],
-        controls: [`crop`, `upload`], // optional
+        view: `grid`,
+        controls: [`upload`],
       },
     }),
 
@@ -242,7 +245,8 @@ export default {
         label: `Photo 4`,
         details: `This is a photo shot image4`,
         limitTo: [`star tv celebrities`],
-        controls: [`crop`, `upload`], // optional
+        view: `grid`,
+        controls: [`upload`],
       },
     }),
 
@@ -366,7 +370,8 @@ export default {
         label: `Partner 1`,
         details: `This is a Partner image`,
         limitTo: [`star tv logo`],
-        controls: [`crop`, `upload`], // optional
+        view: `grid`,
+        controls: [`upload`],
       },
     }),
 
@@ -377,7 +382,8 @@ export default {
         label: `Partner 2`,
         details: `This is a Partner image`,
         limitTo: [`star tv logo`],
-        controls: [`crop`, `upload`], // optional
+        view: `grid`,
+        controls: [`upload`],
       },
     }),
 
@@ -388,7 +394,8 @@ export default {
         label: `Partner 3`,
         details: `This is a Partner image`,
         limitTo: [`star tv logo`],
-        controls: [`crop`, `upload`], // optional
+        view: `grid`,
+        controls: [`upload`],
       },
     }),
 
@@ -399,7 +406,8 @@ export default {
         label: `Partner 4`,
         details: `This is a Partner image`,
         limitTo: [`star tv logo`],
-        controls: [`crop`, `upload`], // optional
+        view: `grid`,
+        controls: [`upload`],
       },
     }),
 
@@ -410,7 +418,8 @@ export default {
         label: `Partner 5`,
         details: `This is a Partner image`,
         limitTo: [`star tv logo`],
-        controls: [`crop`, `upload`], // optional
+        view: `grid`,
+        controls: [`upload`],
       },
     }),
 
@@ -421,7 +430,8 @@ export default {
         label: `Partner 6`,
         details: `This is a Partner image`,
         limitTo: [`star tv logo`],
-        controls: [`crop`, `upload`], // optional
+        view: `grid`,
+        controls: [`upload`],
       },
     }),
 
@@ -432,7 +442,8 @@ export default {
         label: `Partner 7`,
         details: `This is a Partner image`,
         limitTo: [`star tv logo`],
-        controls: [`crop`, `upload`], // optional
+        view: `grid`,
+        controls: [`upload`],
       },
     }),
 

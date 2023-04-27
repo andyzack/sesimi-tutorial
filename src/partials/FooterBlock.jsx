@@ -93,7 +93,7 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
               }}
             >
               {footerHeadline.text}
-              <div className={` border-b-2 border-primary w-24 m-auto pt-1`}></div>
+              <div className={` border-b-2 border-primary w-24 m-auto pt-2`}></div>
             </div>
           </GridItem>
           <GridItem className={`grid-in-[2/2/2/-2] flex items-start justify-center`}>
@@ -105,14 +105,14 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
                     data-hitarea={`partner`+(index+1)}
                     className={`flex justify-center`}
                   >
-                    <Img src={partner?.url.replace(`v1/studio`,`e_trim/v1/studio`)} className="w-auto h-full object-contain absolute" />
+                    <Img src={partner?.url.replace(`v1/studio`,`e_trim/v1/studio`)} className="w-full h-full object-contain absolute" />
                   </GridItem>
                 )
               })}
             </div>
           </GridItem>
           <GridItem
-            className={`grid-in-[3/2/3/-2] flex items-start justify-end pt-2 ${footerCopy.size ? `text-[length:var(--font-size)]` : `text-base`} tracking-[--tracking]`}
+            className={`grid-in-[3/2/3/-2] flex items-start justify-end pt-2 text-tertiary ${footerCopy.size ? `text-[length:var(--font-size)]` : `text-xs`} tracking-[--tracking]`}
             style={{
               '--font-size': `${footerCopy.size? footerCopy.size + `rem` : ``}`,
               '--tracking': `${footerCopy.tracking ? footerCopy.tracking * 0.01 : 0}em`,

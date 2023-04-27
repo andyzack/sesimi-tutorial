@@ -70,7 +70,7 @@ export default {
   footerHeadlineTracking: `0`,
 
   footerCopy: `+ 268 more channels including 9 Marathi Channels`,
-  footerCopySize: `1`,
+  footerCopySize: `0.75`,
   footerCopyTracking: `0`,
 
   partner1: {
