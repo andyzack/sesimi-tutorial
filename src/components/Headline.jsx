@@ -15,7 +15,7 @@ export const Headline = ({headline = {}, className = ``, style = {}}) => {
         {headline.text}
       </h1>
     
-      <div className={` border-b-2 border-secondary w-24 pt-3 mb-2`}></div>
+      <div className={` border-b-2 border-secondary w-24 pt-2 mb-2`}></div>
     </>
   )
 }

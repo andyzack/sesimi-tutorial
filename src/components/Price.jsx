@@ -12,7 +12,7 @@ export const Price = ({price = ``, className = ``, style = {}}) => {
           className={`
             flex items-center justify-center  bg-white text-secondary
             w-full h-full rounded-full
-            border-dotted border-[1px] border-secondary border-spacing-1 ring ring-white ring-offset-0
+            border-dotted border-[1px] border-secondary border-opacity-50 border-spacing-1 ring ring-white ring-offset-0
           `}
         >
           <div>
@@ -21,12 +21,14 @@ export const Price = ({price = ``, className = ``, style = {}}) => {
             >
               Just at
             </span>
+            <div className={`border-dotted border-b-[0.64px] border-secondary border-opacity-50 w-1/2 m-auto pt-1`}></div>
             <span
               className={`block text-3xl leading-none`}
             >
               ₹<span className='text-5xl font-semibold leading-none'>259</span>
             </span>
-            <span className='text-base leading-none'>
+            <div className={`border-dotted border-t-[0.64px] border-secondary border-opacity-50 w-1/2 m-auto pb-1`}></div>
+            <span className='text-sm leading-none'>
               per month
             </span>
           </div>

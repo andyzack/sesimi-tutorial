@@ -21,7 +21,9 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
 
   return (
     <div
-      className={`grid w-full h-full
+      className={`
+        xo-footer
+        grid w-full h-full
         grid-areas-[var(--areas)]
         grid-rows-[var(--rows1)] grid-cols-[var(--columns1)]
         min-12/10:grid-rows-[var(--rows2)] min-12/10:grid-cols-[var(--columns2)]
@@ -35,7 +37,7 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
           " l  🤲   ▍"
           " ◣   ▂   ◢ "
         `,
-        '--rows1': `0 50fr 5.4fr 34.2fr 0`,
+        '--rows1': `0 52fr 5.4fr 34.2fr 0`,
         '--columns1': `12.4fr 135.6fr 12.4fr`,
 
         '--areas2': `
@@ -65,7 +67,9 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
         }}
       >
         <div>
+          <div className={`border-dotted border-t-[0.64px] border-white border-opacity-50 w-full m-auto pb-2`}></div>
           Visit <strong className='font-semibold'>www.tataplay.com</strong> <br />Or contact your <strong className='font-semibold'>nearest dealer</strong>
+          <div className={`border-dotted border-b-[0.64px] border-white border-opacity-50 w-full m-auto pt-2`}></div>
         </div>
       </GridItem>
       <GridItem
