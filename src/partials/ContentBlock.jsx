@@ -59,7 +59,7 @@ export const ContentBlock = ({
       >
       <GridItem
         className={`
-          grid-in-[var(--grid-in)]
+          grid-in-[var(--grid-in)] z-10
         `}
         style={{
           '--grid-in': `🏷`,
@@ -178,7 +178,7 @@ export const ContentBlock = ({
 
       <GridItem
         className={`
-          grid-in-[var(--grid-in)]
+          grid-in-[var(--grid-in)] z-10
           grid items-center
         `}
         style={{
@@ -206,7 +206,7 @@ export const ContentBlock = ({
 
       {disclaimer && <GridItem
         className={`
-          grid-in-[var(--grid-in)]
+          grid-in-[var(--grid-in)] z-10
           flex h-full items-center justify-start
         `}
         style={{
@@ -214,7 +214,7 @@ export const ContentBlock = ({
         }}
       >
         <span
-          className={`absolute left-0 bottom-0 text-[length:var(--font-size)] tracking-[--tracking] leading-[1] -rotate-90 w-auto min-12/10:w-1/2`}
+          className={`absolute left-0 bottom-0 text-[length:var(--font-size)] tracking-[--tracking] leading-[1] -rotate-90 w-[60vh]`}
           style={{
             transformOrigin: `0 0`,
             '--font-size': `${disclaimer.size? disclaimer.size : 6}px`,
