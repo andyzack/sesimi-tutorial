@@ -69,6 +69,7 @@ const Template = (props) => {
   } = useTemplate({page, ...props})
   // const animation = useAnimation(props)
 
+  // Font list for use in the fontChoice dropdown
   const fontList = {
     english: {
       fontFamily: `font-VoltePlay`,
@@ -92,6 +93,7 @@ const Template = (props) => {
     },
   }
 
+  // Photo list for use in the photo asset picker
   const photos = [
     {
       photoAsset: photo1,
@@ -126,38 +128,46 @@ const Template = (props) => {
       photoLayer: photo4Layer,
     },
   ]
+
+  // Partner list for use in the partner asset picker
   const partners = [partner1, partner2, partner3, partner4, partner5, partner6, partner7]
 
+  // Object for use in the Headline component
   const headlineObj = {
     text: headline,
     size: headlineSize,
     tracking: headlineTracking,
   }
 
+  // Object for use in the Copy component
   const copyObj = {
     text: copy,
     size: copySize,
     tracking: copyTracking,
   }
 
+  // Object for use in the CTA
   const ctaObj = {
     text: cta,
     size: ctaSize,
     tracking: ctaTracking,
   }
 
+  // Object for use in the Footer Headline
   const footerHeadlineObj = {
     text: footerHeadline,
     size: footerHeadlineSize,
     tracking: footerHeadlineTracking,
   }
 
+  // Object for use in the Footer Copy
   const footerCopyObj = {
     text: footerCopy,
     size: footerCopySize,
     tracking: footerCopyTracking,
   }
 
+  // Object for use in the Disclaimer
   const disclaimerObj = {
     text: disclaimer,
     size: disclaimerSize,
@@ -188,13 +198,16 @@ const Template = (props) => {
           '--rows2': `1fr 1.2fr`,
         }}
       >
+        {/* Content Block */}
         <GridItem className={`grid-in-[1/1/-1/-1]`}>
           <ContentBlock photos={photos} disclaimer={disclaimerObj}>
-            <Headline headline={headlineObj} />
+            {/* Headline and Copy as child elements */}
+            <Headline headline={headlineObj} copy={copyObj} />
             <Copy copy={copyObj} className="text-[10.9pt] leading-tight" />
           </ContentBlock>
         </GridItem>
 
+        {/* Footer Block */}
         <GridItem
           className={`grid-in-[var(--grid-in)] z-50`}
           style={{

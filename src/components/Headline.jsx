@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export const Headline = ({headline = {}, className = ``, style = {}}) => {
+export const Headline = ({headline = {}, copy = {}, className = ``, style = {}}) => {
   return (
     <>
       <h1
@@ -14,8 +14,9 @@ export const Headline = ({headline = {}, className = ``, style = {}}) => {
       >
         {headline.text}
       </h1>
-    
-      <div className={` border-b-2 border-secondary w-24 pt-2 mb-2`}></div>
+      
+
+      {copy?.text && <div className={` border-b-2 border-secondary w-24 pt-2 mb-2`}></div>}
     </>
   )
 }

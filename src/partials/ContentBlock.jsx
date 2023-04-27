@@ -17,22 +17,32 @@ import Logo from '@/components/Logo'
 */
 
 export const ContentBlock = ({
-    children,
-    photos = {},
-    disclaimer = ``,
-    className = ``,
-    style = {},
+  children,
+  photos = {},
+  disclaimer = ``,
+  className = ``,
+  style = {},
 }) => {
     return (
-      <>
       <div
         className={`
+          xo-content-block
           grid h-full w-full overflow-hidden
           grid-areas-[var(--areas1)] grid-rows-[var(--rows1)] grid-cols-[var(--columns1)]
           min-12/10:grid-areas-[var(--areas2)] min-12/10:grid-rows-[var(--rows2)] min-12/10:grid-cols-[var(--columns2)]
           ${className}
         `}
         style={{
+          // MQ LEGEND
+          // Custom Landscape 329mm X 250mm: min-12/10
+
+          // GRID LEGEND
+          // 🉐 = logo
+          // 👑 = headline + subheadline
+          // 🏷 = price
+          // 👪 = celeb photoshots
+          // 📓 = disclaimer
+
           '--areas1': `
             " ◤   —   —   —   —  ◥ "
             " l  ..  ..  🉐  ..  ▍"
@@ -225,8 +235,7 @@ export const ContentBlock = ({
         </span>
       </GridItem>}
     </div>
-      </>
-    )
+  )
 }
 
 export default ContentBlock

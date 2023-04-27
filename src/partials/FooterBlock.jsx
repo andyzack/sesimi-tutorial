@@ -16,13 +16,13 @@ import {GridItem, ResponsiveImage as Img} from '@myadbox/exoplanet-toolkit'
 
 export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, partners = {}, className = ``, style = {}}) => {
 
-  // Cleanup partners object - filter out undefined and no-logo
-  const partnersList = partners = partners?.filter((item) => item != undefined).filter((item) => !item.name.includes(`no-logo`))
+  // Cleanup partners object: filter undefined and items with word 'no-logo' 
+  const partnersList = partners = partners?.filter((item) => item != undefined && !item.name.includes(`no-logo`))
 
   return (
     <div
       className={`
-        xo-footer
+        xo-footer-block
         grid w-full h-full
         grid-areas-[var(--areas)]
         grid-rows-[var(--rows1)] grid-cols-[var(--columns1)]
@@ -30,6 +30,13 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
         ${className}
       `}
       style={{
+        // MQ LEGEND
+        // Custom Landscape 329mm X 250mm: min-12/10
+
+        // GRID LEGEND
+        // 📣 = CTA block
+        // 🤲 = Partners list
+
         '--areas': `
           " ◤   —   ◥ "
           " l  📣   ▍"
@@ -40,18 +47,12 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
         '--rows1': `0 52fr 5.4fr 34.2fr 0`,
         '--columns1': `12.4fr 135.6fr 12.4fr`,
 
-        '--areas2': `
-          " ◤   —   ◥ "
-          " l  📣   ▍"
-          " l  ..   ▍"
-          " l  🤲   ▍"
-          " ◣   ▂   ◢ "
-        `,
         '--rows2': `0 89fr 6.4fr 45.4fr 0`,
         '--columns2': `132.7fr 182fr 14.6fr`,
         ...style,
       }}
     >
+      {/* Footer background with clippath */}
       <GridItem
         className={`bg-secondary grid-in-[var(--grid-in)] [clip-path:polygon(0_60%,_100%_0,_100%_100%,_0%_100%)] min-12/10:[clip-path:polygon(0_88%,_100%_0,_100%_100%,_0%_100%)]`}
         style={{
@@ -59,6 +60,7 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
         }}
       />
 
+      {/* CTA Block */}
       <GridItem
         className={`grid-in-[var(--grid-in)] flex items-end justify-end text-right text-xl`}
         style={{
@@ -72,6 +74,8 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
           <div className={`border-dotted border-b-[0.64px] border-white border-opacity-50 w-full m-auto pt-2`}></div>
         </div>
       </GridItem>
+
+      {/* Partners List */}
       <GridItem
         className={`
           grid-in-[var(--grid-in)]
