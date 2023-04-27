@@ -3,6 +3,21 @@ import {createField} from '@myadbox/nebula-template-utils'
 
 export default {
   fields: [
+    createField.select({
+      name: `fontChoice`,
+      options: {
+        label: `Font choice`,
+        details: `Select the layer for photo 2`,
+        choices: [
+          {value: `english`, label: `Volte Play English`},
+          {value: `hindiVolt`, label: `Volte Play Devanagari`},
+          {value: `hindiTiro`, label: `Tiro Devanagari Hindi`},
+          {value: `tamil`, label: `Tiro Tamil`},
+          {value: `bengali`, label: `Noto Sans Bengali`},
+        ]
+      }
+    }),
+
     createField.text({
       name: `headline`,
       required: true,

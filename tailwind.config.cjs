@@ -14,6 +14,22 @@ const config = {
         `"Volte Play Devanagari"`,
         `sans-serif`,
       ],
+      NotoSansEnglish: [
+        `"Noto Sans"`,
+        `sans-serif`,
+      ],
+      NotoSansBengali: [
+        `"Noto Sans Bengali"`,
+        `sans-serif`,
+      ],
+      TiroDevanagari: [
+        `"Tiro Devanagari"`,
+        `serif`,
+      ],
+      TiroTamil: [
+        `"Tiro Tamil"`,
+        `serif`,
+      ],
     },
     screens: {
       'min-12/10': { 'raw': `(min-aspect-ratio: 1200 / 1000)` },

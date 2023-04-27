@@ -1,5 +1,6 @@
 // @ts-check
 export default {
+  fontChoice: `english`, // english, hindiVolt, hindiTiro, tamil, bengali
   headline: `WELCOME THE STAR \nPARIVAAR TO YOUR FAMILY`,
   headlineSize: `2.25`,
   headlineTracking: `0`,

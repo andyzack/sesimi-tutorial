@@ -15,6 +15,7 @@ const Template = (props) => {
   // data/values.mjs and data/config.mjs `fields`.
   const {
     page: {
+      fontChoice,
       headline,
       headlineSize,
       headlineTracking,
@@ -67,6 +68,31 @@ const Template = (props) => {
     },
   } = useTemplate({page, ...props})
   // const animation = useAnimation(props)
+
+  const fontList = {
+    english: {
+      fontFamily: `font-VoltePlay`,
+      letterSpacing: `0.1em`,
+    },    
+    hindiVolt: {
+      fontFamily: `font-VoltePlayDevanagari`,
+      letterSpacing: `0.2em`,
+    },
+    tamil: {
+      fontFamily: `font-TiroTamil`,
+      letterSpacing: `0.1em`,
+    },
+    hindiTiro: {
+      fontFamily: `font-TiroDevanagari`,
+      letterSpacing: `0.2em`,
+    },
+    bengali: {  
+      fontFamily: `font-NotoSansBengali`,
+      letterSpacing: `0.4em`,
+    },
+  }
+
+  console.log(fontList[fontChoice].fontFamily || fontList[`english`].fontFamily)
 
   const photos = [
     {
@@ -143,7 +169,7 @@ const Template = (props) => {
   return (
     <Body
       // animation={animation}
-      className={`text-white text-xs font-notoSansEnglish`}
+      className={`text-white text-xs`}
       backdropClassName={`bg-primary`}
       backdropStyle={{
         backgroundImage: `transparent`,
@@ -152,7 +178,7 @@ const Template = (props) => {
       <div
         className={`
           xo-wrapper
-          font-VoltePlay
+          ${fontList[fontChoice].fontFamily || fontList[`english`].fontFamily}
           w-screen h-screen text-white grid grid-areas-[var(--areas)] grid-rows-[var(--rows1)] min-12/10:grid-rows-[var(--rows2)]
         `}
         style={{

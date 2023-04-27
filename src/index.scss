@@ -51,6 +51,9 @@
   font-display: block;
 }
 
+/* Or you may use Google Fonts directly from their server like this: */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi&family=Tiro+Tamil&display=swap');
+
 /* To use Tailwind, uncomment the following lines: */
 @tailwind base;
 // add custom CSS here if necessary. After tailwind base, before tailwind components and utilities.
