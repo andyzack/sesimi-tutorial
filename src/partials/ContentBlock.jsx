@@ -108,7 +108,7 @@ export const ContentBlock = ({
           >
             <Img
               src={photos[0].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
-              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)]`}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] drop-shadow-[0_5px_50px_rgba(0,0,0,0.35)]`}
               style={{
                 '--photo-height': `${photos[0].photoHeight}%`,
                 '--photo-vertical': `${photos[0].photoVertical}px`,
@@ -130,7 +130,7 @@ export const ContentBlock = ({
           >
             <Img
               src={photos[1].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
-              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)]`}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] drop-shadow-[0_5px_50px_rgba(0,0,0,0.35)]`}
               style={{
                 '--photo-height': `${photos[1].photoHeight}%`,
                 '--photo-vertical': `${photos[1].photoVertical}px`,
@@ -152,7 +152,7 @@ export const ContentBlock = ({
           >
             <Img
               src={photos[2].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
-              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)]`}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] drop-shadow-[0_5px_50px_rgba(0,0,0,0.35)]`}
               style={{
                 '--photo-height': `${photos[2].photoHeight}%`,
                 '--photo-vertical': `${photos[2].photoVertical}px`,
@@ -174,7 +174,7 @@ export const ContentBlock = ({
           >
             <Img
               src={photos[3].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
-              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)]`}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] drop-shadow-[0_5px_50px_rgba(0,0,0,0.35)]`}
               style={{
                 '--photo-height': `${photos[3].photoHeight}%`,
                 '--photo-vertical': `${photos[3].photoVertical}px`,
