@@ -16,6 +16,7 @@ const Template = (props) => {
   const {
     page: {
       fontChoice,
+      backgroundChoice,
       headline,
       headlineSize,
       headlineTracking,
@@ -174,11 +175,51 @@ const Template = (props) => {
     tracking: disclaimerTracking,
   }
 
+  // Background list for use in the backgroundChoice dropdown
+  let colorList = {
+    purple: {
+      body: `bg-tataplay-purple text-white`,
+      logoPart1: `fill-tataplay-white`,
+      logoPart2: `fill-tataplay-pink`,
+      footerbg: `bg-tataplay-pink`,
+      cta: `text-white`,
+    },
+    blue: {
+      body: `bg-tataplay-blue text-white`,
+      logoPart1: `fill-tataplay-white`,
+      logoPart2: `fill-tataplay-pink`,
+      footerbg: `bg-tataplay-pink`,
+      cta: `text-white`,
+    },
+    pink: {
+      body: `bg-tataplay-pink text-white`,
+      logoPart1: `fill-tataplay-white`,
+      logoPart2: `fill-tataplay-white`,
+      footerbg: `bg-tataplay-purple`,
+      cta: `text-white`,
+    },
+    black: {
+      body: `bg-tataplay-black text-white`,
+      logoPart1: `fill-tataplay-white`,
+      logoPart2: `fill-tataplay-pink`,
+      footerbg: `bg-tataplay-pink`,
+      cta: `text-white`,
+    },
+    white: {
+      body: `bg-tataplay-white text-black`,
+      logoPart1: `fill-tataplay-black`,
+      logoPart2: `fill-tataplay-pink`,
+      footerbg: `bg-tataplay-purple`,
+      cta: `text-white`,
+    },
+  }
+
+  const colors = colorList[backgroundChoice] || colorList[`purple`] // default to purple if no match
+
   return (
     <Body
       // animation={animation}
-      className={`text-white text-xs`}
-      backdropClassName={`bg-primary`}
+      backdropClassName={``}
       backdropStyle={{
         backgroundImage: `transparent`,
       }}
@@ -186,8 +227,9 @@ const Template = (props) => {
       <div
         className={`
           xo-wrapper
-          ${fontList[fontChoice].fontFamily || fontList[`english`].fontFamily}
-          w-screen h-screen text-white grid grid-areas-[var(--areas)] grid-rows-[var(--rows1)] min-12/10:grid-rows-[var(--rows2)]
+          ${fontList[fontChoice]?.fontFamily || fontList[`english`]?.fontFamily}
+          ${colors.body || colors.body}
+          w-screen h-screen text-xs grid grid-areas-[var(--areas)] grid-rows-[var(--rows1)] min-12/10:grid-rows-[var(--rows2)]
         `}
         style={{
           '--areas': `
@@ -200,7 +242,7 @@ const Template = (props) => {
       >
         {/* Content Block */}
         <GridItem className={`grid-in-[1/1/-1/-1]`}>
-          <ContentBlock photos={photos} disclaimer={disclaimerObj}>
+          <ContentBlock photos={photos} disclaimer={disclaimerObj} colors={colors}>
             {/* Headline and Copy as child elements */}
             <Headline headline={headlineObj} copy={copyObj} />
             <Copy copy={copyObj} className="text-[10.9pt] leading-tight" />
@@ -214,7 +256,7 @@ const Template = (props) => {
             '--grid-in': `🦶`,
           }}
         >
-          <FooterBlock cta={ctaObj} footerHeadline={footerHeadlineObj} footerCopy={footerCopyObj} partners={partners} />
+          <FooterBlock cta={ctaObj} footerHeadline={footerHeadlineObj} footerCopy={footerCopyObj} partners={partners} colors={colors} />
         </GridItem>
       </div>
     </Body>

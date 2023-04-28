@@ -35,10 +35,15 @@ const config = {
       'min-12/10': { 'raw': `(min-aspect-ratio: 1200 / 1000)` },
     },
     extend: {
+      fontSize: {
+        'body': `1em`,
+      },
       colors: {
-        'primary': `#5b2d87`,
-        'secondary': `#e50075`,
-        'tertiary': `#050606`,
+        'tataplay-purple': `#5b2d87`,
+        'tataplay-pink': `#e50075`,
+        'tataplay-blue': `#6b00dd`,
+        'tataplay-black': `#050606`,
+        'tataplay-white': `#ffffff`,
       }
     },
   },

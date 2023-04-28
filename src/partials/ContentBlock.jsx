@@ -8,6 +8,7 @@ import Logo from '@/components/Logo'
 * @param {object} props - all available props
 * @param {string} [props.copy] - copy details to display
 * @param {object} [props.photos] - sub headline details to display
+* @param {object} [props.colors] - color theme to display
 * @param {object} [props.disclaimer] - disclaimer details to display
 * @param {string} [props.className] - css class names
 * @param {object} [props.style] - css inline style
@@ -19,10 +20,13 @@ import Logo from '@/components/Logo'
 export const ContentBlock = ({
   children,
   photos = {},
+  colors = {},
   disclaimer = ``,
   className = ``,
   style = {},
 }) => {
+    const dropShadow = colors.body.includes(`bg-tataplay-white`) ? `` : `drop-shadow-[0_5px_50px_rgba(0,0,0,0.25)]`
+
     return (
       <div
         className={`
@@ -108,7 +112,7 @@ export const ContentBlock = ({
           >
             <Img
               src={photos[0].photoAsset.url.replace(`v1/ogilvy-in`,`e_trim/v1/ogilvy-in`)}
-              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] drop-shadow-[0_5px_50px_rgba(0,0,0,0.35)]`}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] ${dropShadow}`}
               style={{
                 '--photo-height': `${photos[0].photoHeight}%`,
                 '--photo-vertical': `${photos[0].photoVertical}px`,
@@ -130,7 +134,7 @@ export const ContentBlock = ({
           >
             <Img
               src={photos[1].photoAsset.url.replace(`v1/ogilvy-in`,`e_trim/v1/ogilvy-in`)}
-              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] drop-shadow-[0_5px_50px_rgba(0,0,0,0.35)]`}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] ${dropShadow}`}
               style={{
                 '--photo-height': `${photos[1].photoHeight}%`,
                 '--photo-vertical': `${photos[1].photoVertical}px`,
@@ -152,7 +156,7 @@ export const ContentBlock = ({
           >
             <Img
               src={photos[2].photoAsset.url.replace(`v1/ogilvy-in`,`e_trim/v1/ogilvy-in`)}
-              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] drop-shadow-[0_5px_50px_rgba(0,0,0,0.35)]`}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] ${dropShadow}`}
               style={{
                 '--photo-height': `${photos[2].photoHeight}%`,
                 '--photo-vertical': `${photos[2].photoVertical}px`,
@@ -174,7 +178,7 @@ export const ContentBlock = ({
           >
             <Img
               src={photos[3].photoAsset.url.replace(`v1/ogilvy-in`,`e_trim/v1/ogilvy-in`)}
-              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] drop-shadow-[0_5px_50px_rgba(0,0,0,0.35)]`}
+              className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] ${dropShadow}`}
               style={{
                 '--photo-height': `${photos[3].photoHeight}%`,
                 '--photo-vertical': `${photos[3].photoVertical}px`,
@@ -211,7 +215,7 @@ export const ContentBlock = ({
           '--grid-in': `🉐`,
         }}
       >
-        <Logo className='pl-3 h-full' />
+        <Logo colors={colors} className='pl-3 h-full' />
       </GridItem>
 
       {disclaimer && <GridItem

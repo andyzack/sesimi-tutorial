@@ -9,13 +9,14 @@ import ReactMarkdown from 'react-markdown'
  * @param {object} [props.footerHeadline] - footer headline to display
  * @param {object} [props.footerCopy] - footer copy to display
  * @param {object} [props.partners] - partners list to display
+ * @param {object} [props.colors] - color theme to display
  * @param {string} [props.className] - css class names
  * @param {object} [props.style] - css inline style
  *
  * @returns {React.ReactElement} the template
  */
 
-export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, partners = {}, className = ``, style = {}}) => {
+export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, partners = {}, colors = {}, className = ``, style = {}}) => {
 
   // Cleanup partners object: filter undefined and items with word 'no-logo' 
   const partnersList = partners = partners?.filter((item) => item != undefined && !item.name.includes(`no-logo`))
@@ -55,7 +56,7 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
     >
       {/* Footer background with clippath */}
       <GridItem
-        className={`bg-secondary grid-in-[var(--grid-in)] [clip-path:polygon(0_60%,_100%_0,_100%_100%,_0%_100%)] min-12/10:[clip-path:polygon(0_88%,_100%_0,_100%_100%,_0%_100%)]`}
+        className={`${colors.footerbg} grid-in-[var(--grid-in)] [clip-path:polygon(0_60%,_100%_0,_100%_100%,_0%_100%)] min-12/10:[clip-path:polygon(0_88%,_100%_0,_100%_100%,_0%_100%)]`}
         style={{
           '--grid-in': `1/1/-1/-1`,
         }}
@@ -63,7 +64,7 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
 
       {/* CTA Block */}
       <GridItem
-        className={`grid-in-[var(--grid-in)] flex items-end justify-end text-right text-xl whitespace-break-spaces`}
+        className={`grid-in-[var(--grid-in)] flex items-end justify-end text-right text-xl ${colors.cta} whitespace-break-spaces`}
         style={{
           '--grid-in': `📣`,
           alignItems: `end`,
@@ -93,7 +94,7 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
         }}
       >
         <div
-          className={`grid grid-rows-[var(--rows)] grid-cols-[var(--cols)] h-full w-full bg-white text-primary rounded-t-3xl`}
+          className={`grid grid-rows-[var(--rows)] grid-cols-[var(--cols)] h-full w-full bg-white text-tataplay-purple rounded-t-3xl`}
           style={{
             '--rows': `1fr 1fr 0.6fr`,
             '--cols': `0.05fr 1fr 0.05fr`,
@@ -109,7 +110,7 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
               }}
             >
               {footerHeadline.text}
-              <div className={` border-b-2 border-primary w-24 m-auto pt-2`}></div>
+              <div className={` border-b-2 border-tataplay-purple w-24 m-auto pt-2`}></div>
             </div>
           </GridItem>
           <GridItem className={`grid-in-[2/2/2/-2] flex items-start justify-center`}>
@@ -128,7 +129,7 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
             </div>
           </GridItem>
           <GridItem
-            className={`grid-in-[3/2/3/-2] flex items-start justify-end pt-2 text-tertiary ${footerCopy.size ? `text-[length:var(--font-size)]` : `text-xs`} tracking-[--tracking]`}
+            className={`grid-in-[3/2/3/-2] flex items-start justify-end pt-2 text-tataplay-black ${footerCopy.size ? `text-[length:var(--font-size)]` : `text-xs`} tracking-[--tracking]`}
             style={{
               '--font-size': `${footerCopy.size? footerCopy.size + `rem` : ``}`,
               '--tracking': `${footerCopy.tracking ? footerCopy.tracking * 0.01 : 0}em`,

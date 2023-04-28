@@ -18,6 +18,21 @@ export default {
       }
     }),
 
+    createField.select({
+      name: `backgroundChoice`,
+      options: {
+        label: `Background choice`,
+        details: `Select the layer for photo 2`,
+        choices: [
+          {value: `purple`, label: `Purple`},
+          {value: `blue`, label: `Blue`},
+          {value: `pink`, label: `Pink`},
+          {value: `black`, label: `Black`},
+          {value: `white`, label: `White`},
+        ]
+      }
+    }),
+
     createField.text({
       name: `headline`,
       required: true,
