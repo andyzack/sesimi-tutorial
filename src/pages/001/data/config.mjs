@@ -296,12 +296,13 @@ export default {
       }
     }),
 
-    createField.text({
+    createField.textarea({
       name: `cta`,
-      required: true,
+      maxLength: 100,
+      rows: 2,
       options: {
         label: `CTA`,
-        details: `This is a detail tooltip`,
+        details: `Formatting tips. Soft return: add two spaces and a return. New paragraph: add two returns. Bold text: wrap in two asterisks, **like this**. Italic text: wrap in one asterisks, *like this*. Add “##” for Subheading 2, “###” for Subheading 3 and “-” for Lists.”`,
       },
     }),
     createField.number({

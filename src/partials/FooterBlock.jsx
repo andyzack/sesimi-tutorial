@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {GridItem, ResponsiveImage as Img} from '@myadbox/exoplanet-toolkit'
+import ReactMarkdown from 'react-markdown'
 
 /**
  * This is the footer block
@@ -62,7 +63,7 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
 
       {/* CTA Block */}
       <GridItem
-        className={`grid-in-[var(--grid-in)] flex items-end justify-end text-right text-xl`}
+        className={`grid-in-[var(--grid-in)] flex items-end justify-end text-right text-xl whitespace-break-spaces`}
         style={{
           '--grid-in': `📣`,
           alignItems: `end`,
@@ -70,7 +71,14 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
       >
         <div>
           <div className={`border-dotted border-t-[0.64px] border-white border-opacity-50 w-full m-auto pb-2`}></div>
-          Visit <strong className='font-semibold'>www.tataplay.com</strong> <br />Or contact your <strong className='font-semibold'>nearest dealer</strong>
+          <ReactMarkdown
+            components={{
+              strong: ({children}) => <strong className='font-semibold'>{children}</strong>
+            }}
+          >
+            {cta.text}
+          </ReactMarkdown>
+          {/* Visit <strong className='font-semibold'>www.tataplay.com</strong> <br />Or contact your <strong className='font-semibold'>nearest dealer</strong> */}
           <div className={`border-dotted border-b-[0.64px] border-white border-opacity-50 w-full m-auto pt-2`}></div>
         </div>
       </GridItem>

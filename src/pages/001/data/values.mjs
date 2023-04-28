@@ -61,7 +61,9 @@ export default {
   photo4Rotate: 6,
   photo4Layer: 2,
 
-  cta: `Visit www.tataplay.com \nOr contact your nearest dealer`,
+  cta: `Visit **www.tataplay.com**
+Or contact your **nearest dealer**`,
+
   ctaSize: ``,
   ctaTracking: `0`,
 
