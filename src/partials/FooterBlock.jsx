@@ -121,7 +121,7 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
                     data-hitarea={`partner`+(index+1)}
                     className={`flex justify-center`}
                   >
-                    <Img src={partner?.url.replace(`v1/studio`,`e_trim/v1/studio`)} className="w-full h-full object-contain absolute" />
+                    <Img src={partner?.url.replace(`v1/ogilvy-in`,`e_trim/v1/ogilvy-in`)} className="w-full h-full object-contain absolute" />
                   </GridItem>
                 )
               })}

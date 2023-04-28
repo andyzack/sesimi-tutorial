@@ -107,7 +107,7 @@ export const ContentBlock = ({
             }}
           >
             <Img
-              src={photos[0].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
+              src={photos[0].photoAsset.url.replace(`v1/ogilvy-in`,`e_trim/v1/ogilvy-in`)}
               className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] drop-shadow-[0_5px_50px_rgba(0,0,0,0.35)]`}
               style={{
                 '--photo-height': `${photos[0].photoHeight}%`,
@@ -129,7 +129,7 @@ export const ContentBlock = ({
             }}
           >
             <Img
-              src={photos[1].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
+              src={photos[1].photoAsset.url.replace(`v1/ogilvy-in`,`e_trim/v1/ogilvy-in`)}
               className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] drop-shadow-[0_5px_50px_rgba(0,0,0,0.35)]`}
               style={{
                 '--photo-height': `${photos[1].photoHeight}%`,
@@ -151,7 +151,7 @@ export const ContentBlock = ({
             }}
           >
             <Img
-              src={photos[2].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
+              src={photos[2].photoAsset.url.replace(`v1/ogilvy-in`,`e_trim/v1/ogilvy-in`)}
               className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] drop-shadow-[0_5px_50px_rgba(0,0,0,0.35)]`}
               style={{
                 '--photo-height': `${photos[2].photoHeight}%`,
@@ -173,7 +173,7 @@ export const ContentBlock = ({
             }}
           >
             <Img
-              src={photos[3].photoAsset.url.replace(`v1/studio`,`e_trim/v1/studio`)}
+              src={photos[3].photoAsset.url.replace(`v1/ogilvy-in`,`e_trim/v1/ogilvy-in`)}
               className={`absolute object-contain w-full h-[var(--photo-height)] top-[var(--photo-vertical)] left-[var(--photo-horizontal)] rotate-[var(--photo-rotate)] drop-shadow-[0_5px_50px_rgba(0,0,0,0.35)]`}
               style={{
                 '--photo-height': `${photos[3].photoHeight}%`,
