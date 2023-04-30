@@ -10,6 +10,14 @@ export default {
   copySize: `1`,
   copyTracking: `0`,
 
+  logoChoice: {
+    name: `no-image`,
+    description: null,
+    id: `644eddc3d6129b28907b4eb9`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/ogilvy-in/logo-tata-play_dnqniu`,
+    datasets: {},
+  },
+
   photo1: {
     name: `photo1d HH new bats man1`,
     description: null,

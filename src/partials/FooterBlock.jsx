@@ -18,8 +18,8 @@ import ReactMarkdown from 'react-markdown'
 
 export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, partners = {}, colors = {}, className = ``, style = {}}) => {
 
-  // Cleanup partners object: filter undefined and items with word 'no-logo' 
-  const partnersList = partners = partners?.filter((item) => item != undefined && !item.name.includes(`no-logo`))
+  // Cleanup partners object: filter undefined and items with word 'no-image' 
+  const partnersList = partners = partners?.filter((item) => item != undefined && !item.name.includes(`no-image`))
 
   return (
     <div

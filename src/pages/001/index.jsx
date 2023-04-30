@@ -17,6 +17,7 @@ const Template = (props) => {
     page: {
       fontChoice,
       backgroundChoice,
+      logoChoice,
       headline,
       headlineSize,
       headlineTracking,
@@ -219,10 +220,6 @@ const Template = (props) => {
   return (
     <Body
       // animation={animation}
-      backdropClassName={``}
-      backdropStyle={{
-        backgroundImage: `transparent`,
-      }}
     >
       <div
         className={`
@@ -242,7 +239,7 @@ const Template = (props) => {
       >
         {/* Content Block */}
         <GridItem className={`grid-in-[1/1/-1/-1]`}>
-          <ContentBlock photos={photos} disclaimer={disclaimerObj} colors={colors}>
+          <ContentBlock photos={photos} disclaimer={disclaimerObj} colors={colors} logoChoice={logoChoice}>
             {/* Headline and Copy as child elements */}
             <Headline headline={headlineObj} copy={copyObj} />
             <Copy copy={copyObj} className="text-[10.9pt] leading-tight" />

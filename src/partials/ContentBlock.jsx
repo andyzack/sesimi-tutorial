@@ -9,6 +9,7 @@ import Logo from '@/components/Logo'
 * @param {string} [props.copy] - copy details to display
 * @param {object} [props.photos] - sub headline details to display
 * @param {object} [props.colors] - color theme to display
+* @param {object} [props.logoChoice] - logo to display
 * @param {object} [props.disclaimer] - disclaimer details to display
 * @param {string} [props.className] - css class names
 * @param {object} [props.style] - css inline style
@@ -21,6 +22,7 @@ export const ContentBlock = ({
   children,
   photos = {},
   colors = {},
+  logoChoice = {},
   disclaimer = ``,
   className = ``,
   style = {},
@@ -215,7 +217,18 @@ export const ContentBlock = ({
           '--grid-in': `🉐`,
         }}
       >
-        <Logo colors={colors} className='pl-3 h-full' />
+        {!logoChoice?.name.includes(`no-image`) ? (
+          <div
+            className={`
+              flex items-start justify-start
+            `}
+          >
+            <Img src={logoChoice?.url.replace(`v1/ogilvy-in`,`e_trim/v1/ogilvy-in`)} className='pl-3 object-contain absolute' />
+          </div>
+          
+        ) : (
+          <Logo colors={colors} className='pl-3 h-full' />
+        )}
       </GridItem>
 
       {disclaimer && <GridItem

@@ -33,6 +33,18 @@ export default {
       }
     }),
 
+    createField.asset({
+      name: `logoChoice`,
+      required: true,
+      options: {
+        label: `Logo choice`,
+        details: `Select the Logo`,
+        limitTo: [`tata play logo`],
+        view: `grid`,
+        controls: [`upload`],
+      },
+    }),
+
     createField.text({
       name: `headline`,
       required: true,
