@@ -87,7 +87,7 @@ export const ContentBlock = ({
       </GridItem>
 
       {/* Price */}
-      <GridItem
+      {price?.text && <GridItem
         className={`
           grid-in-[var(--grid-in)] z-10
         `}
@@ -96,7 +96,7 @@ export const ContentBlock = ({
         }}
       >
         <Price price={price} />
-      </GridItem>
+      </GridItem>}
     
       {/* Photoshot */}
       <GridItem
@@ -211,11 +211,11 @@ export const ContentBlock = ({
       <GridItem
         className={`
           grid-in-[var(--grid-in)] z-10
-          grid items-center
+          grid items-center pt-6
         `}
         style={{
-          '--grid-in': `👑`,
-          alignItems: `center`,
+          '--grid-in': price?.text ? `👑` : `👑 / 🏷 / 👑 / 👑`,
+          alignItems: `start`,
         }}
       >
         <div
@@ -228,10 +228,11 @@ export const ContentBlock = ({
       {/* Logo */}
       <GridItem
         className={`
-          grid-in-[var(--grid-in)]
+          grid-in-[var(--grid-in-1)] min-12/10:grid-in-[var(--grid-in-2)]
         `}
         style={{
-          '--grid-in': `🉐`,
+          '--grid-in-1': price?.text ? `🉐` : `🉐 / 🏷 / 🉐 / 🉐`,
+          '--grid-in-2': `🉐`,
         }}
       >
         {!logoChoice?.name.includes(`no-image`) ? (

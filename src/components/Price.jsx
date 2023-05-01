@@ -20,6 +20,7 @@ export const Price = ({price = {}, className = ``, style = {}}) => {
         `}
       >
         <div
+          data-hitarea="price"
           className={`
             flex items-center justify-center  bg-white text-tataplay-pink
             w-full h-full rounded-full

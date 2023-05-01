@@ -70,7 +70,9 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
           alignItems: `end`,
         }}
       >
-        <div>
+        <div
+          data-hitarea="cta"
+        >
           <div className={`border-dotted border-t-[0.64px] border-white border-opacity-50 w-full m-auto pb-2`}></div>
           <ReactMarkdown
             components={{
