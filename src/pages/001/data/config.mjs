@@ -91,6 +91,75 @@ export default {
       },
     }),
 
+    createField.text({
+      name: `price`,
+      required: true,
+      options: {
+        label: `Price`,
+        details: `This is a detail tooltip`,
+      },
+    }),
+    createField.number({
+      name: `priceSize`,
+      options: {
+        label: `Price font size adjustment (rem)`,
+        details: `Change this to scale font size up or down.`,
+      },
+    }),
+    createField.number({
+      name: `priceTracking`,
+      options: {
+        label: `Price tracking adjustment (tracking value * 0.01em)`,
+        details: `Change this to scale font tracking up or down.`,
+      },
+    }),
+
+    createField.text({
+      name: `priceCopyTop`,
+      required: true,
+      options: {
+        label: `Price copy top`,
+        details: `This is a detail tooltip`,
+      },
+    }),
+    createField.number({
+      name: `priceCopyTopSize`,
+      options: {
+        label: `Price copy top font size adjustment (rem)`,
+        details: `Change this to scale font size up or down.`,
+      },
+    }),
+    createField.number({
+      name: `priceCopyTopTracking`,
+      options: {
+        label: `Price copy top tracking adjustment (tracking value * 0.01em)`,
+        details: `Change this to scale font tracking up or down.`,
+      },
+    }),
+
+    createField.text({
+      name: `priceCopyBottom`,
+      required: true,
+      options: {
+        label: `Price copy bottom`,
+        details: `This is a detail tooltip`,
+      },
+    }),
+    createField.number({
+      name: `priceCopyBottomSize`,
+      options: {
+        label: `Price copy bottom font size adjustment (rem)`,
+        details: `Change this to scale font size up or down.`,
+      },
+    }),
+    createField.number({
+      name: `priceCopyBottomTracking`,
+      options: {
+        label: `Price copy bottom tracking adjustment (tracking value * 0.01em)`,
+        details: `Change this to scale font tracking up or down.`,
+      },
+    }),
+
     createField.asset({
       name: `photo1`,
       required: true,

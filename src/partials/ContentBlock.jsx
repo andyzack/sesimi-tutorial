@@ -4,12 +4,13 @@ import Price from '@/components/Price'
 import Logo from '@/components/Logo'
 
 /**
-* This is the headline component
+* This is the ContentBlock component
 * @param {object} props - all available props
 * @param {string} [props.copy] - copy details to display
 * @param {object} [props.photos] - sub headline details to display
 * @param {object} [props.colors] - color theme to display
 * @param {object} [props.logoChoice] - logo to display
+* @param {object} [props.price] - price details to display
 * @param {object} [props.disclaimer] - disclaimer details to display
 * @param {string} [props.className] - css class names
 * @param {object} [props.style] - css inline style
@@ -23,6 +24,7 @@ export const ContentBlock = ({
   photos = {},
   colors = {},
   logoChoice = {},
+  price = {},
   disclaimer = ``,
   className = ``,
   style = {},
@@ -81,7 +83,7 @@ export const ContentBlock = ({
           '--grid-in': `🏷`,
         }}
       >
-        <Price />
+        <Price price={price} />
       </GridItem>
 
       <GridItem

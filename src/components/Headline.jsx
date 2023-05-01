@@ -1,5 +1,17 @@
 import * as React from 'react'
 
+/**
+* This is the headline component
+* @param {object} props - all available props
+* @param {object} [props.headline] - headline details to display
+* @param {object} [props.copy] - copy details to display
+* @param {string} [props.className] - css class names
+* @param {object} [props.style] - css inline style
+* @param {React.ReactNode} [props.children] - children to render
+*
+* @returns {React.ReactElement} the template
+*/
+
 export const Headline = ({headline = {}, copy = {}, className = ``, style = {}}) => {
   return (
     <>

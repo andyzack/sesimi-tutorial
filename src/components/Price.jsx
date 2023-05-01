@@ -1,6 +1,17 @@
 import * as React from 'react'
 
-export const Price = ({price = ``, className = ``, style = {}}) => {
+/**
+* This is the price component
+* @param {object} props - all available props
+* @param {object} [props.price] - price details to display
+* @param {string} [props.className] - css class names
+* @param {object} [props.style] - css inline style
+* @param {React.ReactNode} [props.children] - children to render
+*
+* @returns {React.ReactElement} the template
+*/
+
+export const Price = ({price = {}, className = ``, style = {}}) => {
   return (
     <>
       <div
@@ -17,19 +28,35 @@ export const Price = ({price = ``, className = ``, style = {}}) => {
         >
           <div>
             <span
-              className={`text-base leading-none block`}
+              className={`${price?.topSize ? `text-[length:var(--font-size)]` : `text-base`} tracking-[--tracking] leading-none block`}
+              style={{
+                '--font-size': `${price?.topSize ? price.topSize + `rem` : ``}`,
+                '--tracking': `${price?.topTracking ? price?.topTracking * 0.01 : 0}em`,
+              }}
             >
-              Just at
+              {price?.topText}
             </span>
             <div className={`border-dotted border-b-[0.64px] border-tataplay-pink border-opacity-50 w-1/2 m-auto pt-1`}></div>
             <span
               className={`block text-3xl leading-none`}
             >
-              ₹<span className='text-5xl font-semibold leading-none'>259</span>
+              ₹<span className={`${price?.size ? `text-[length:var(--font-size)]` : `text-5xl`} tracking-[--tracking] font-semibold leading-none`}
+                style={{
+                  '--font-size': `${price?.size ? price.size + `rem` : ``}`,
+                  '--tracking': `${price?.tracking ? price?.tracking * 0.01 : 0}em`,
+                }}              
+              >
+                {price?.text}
+              </span>
             </span>
             <div className={`border-dotted border-t-[0.64px] border-tataplay-pink border-opacity-50 w-1/2 m-auto pb-1`}></div>
-            <span className='text-sm leading-none'>
-              per month
+            <span className='${price?.topSize ? `text-[length:var(--font-size)]` : `text-sm`} tracking-[--tracking] leading-none'
+              style={{
+                '--font-size': `${price?.bottomSize ? price.bottomSize + `rem` : ``}`,
+                '--tracking': `${price?.bottomTracking ? price?.bottomTracking * 0.01 : 0}em`,
+              }}
+            >
+              {price?.bottomText}
             </span>
           </div>
         </div>

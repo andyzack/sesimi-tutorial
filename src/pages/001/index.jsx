@@ -24,6 +24,15 @@ const Template = (props) => {
       copy,
       copySize,
       copyTracking,
+      price,
+      priceSize,
+      priceTracking,
+      priceCopyTop,
+      priceCopyTopSize,
+      priceCopyTopTracking,
+      priceCopyBottom,
+      priceCopyBottomSize,
+      priceCopyBottomTracking,
       photo1,
       photo1Height,
       photo1Vertical,
@@ -176,6 +185,18 @@ const Template = (props) => {
     tracking: disclaimerTracking,
   }
 
+  const priceObj = {
+    text: price,
+    size: priceSize,
+    tracking: priceTracking,
+    topText: priceCopyTop,
+    topSize: priceCopyTopSize,
+    topTracking: priceCopyTopTracking,
+    bottomText: priceCopyBottom,
+    bottomSize: priceCopyBottomSize,
+    bottomTracking: priceCopyBottomTracking,
+  }
+
   // Background list for use in the backgroundChoice dropdown
   let colorList = {
     purple: {
@@ -239,7 +260,7 @@ const Template = (props) => {
       >
         {/* Content Block */}
         <GridItem className={`grid-in-[1/1/-1/-1]`}>
-          <ContentBlock photos={photos} disclaimer={disclaimerObj} colors={colors} logoChoice={logoChoice}>
+          <ContentBlock photos={photos} disclaimer={disclaimerObj} colors={colors} logoChoice={logoChoice} price={priceObj}>
             {/* Headline and Copy as child elements */}
             <Headline headline={headlineObj} copy={copyObj} />
             <Copy copy={copyObj} className="text-[10.9pt] leading-tight" />

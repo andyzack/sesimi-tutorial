@@ -10,11 +10,23 @@ export default {
   copySize: `1`,
   copyTracking: `0`,
 
+  price: `259`,
+  priceSize: `3`,
+  priceTracking: `0`,
+
+  priceCopyTop: `Just at`,
+  priceCopyTopSize: `1`,
+  priceCopyTopTracking: `0`,
+
+  priceCopyBottom: `per month`,
+  priceCopyBottomSize: `0.875`,
+  priceCopyBottomTracking: `0`,
+
   logoChoice: {
-    name: `no-image`,
-    description: null,
-    id: `644eddc3d6129b28907b4eb9`,
-    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/ogilvy-in/logo-tata-play_dnqniu`,
+    name: `no-image-preview`,
+    description: ``,
+    id: `644b87ddd6210aa596c47d63`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/ogilvy-in/no-image-preview_olrrmo`,
     datasets: {},
   },
 
