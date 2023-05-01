@@ -3,34 +3,28 @@ import {createField} from '@myadbox/nebula-template-utils'
 
 export default {
   fields: [
-    createField.select({
-      name: `fontChoice`,
+    createField.asset({
+      name: `themeColorChoice`,
+      required: true,
       options: {
-        label: `Font choice`,
-        details: `Select the layer for photo 2`,
-        choices: [
-          {value: `english`, label: `Volte Play English`},
-          {value: `hindiVolt`, label: `Volte Play Devanagari`},
-          {value: `hindiTiro`, label: `Tiro Devanagari Hindi`},
-          {value: `tamil`, label: `Tiro Tamil`},
-          {value: `bengali`, label: `Noto Sans Bengali`},
-        ]
-      }
+        label: `Theme color choice`,
+        details: `Select the theme colour`,
+        limitTo: [`brand colours`],
+        view: `grid`,
+        controls: [`upload`],
+      },
     }),
 
-    createField.select({
-      name: `backgroundChoice`,
+    createField.asset({
+      name: `backgroundImageChoice`,
+      required: true,
       options: {
-        label: `Background choice`,
-        details: `Select the layer for photo 2`,
-        choices: [
-          {value: `purple`, label: `Purple`},
-          {value: `blue`, label: `Blue`},
-          {value: `pink`, label: `Pink`},
-          {value: `black`, label: `Black`},
-          {value: `white`, label: `White`},
-        ]
-      }
+        label: `Background image choice`,
+        details: `Select the background image`,
+        limitTo: [`background`],
+        view: `grid`,
+        controls: [`upload`, `crop`],
+      },
     }),
 
     createField.asset({
@@ -43,6 +37,21 @@ export default {
         view: `grid`,
         controls: [`upload`],
       },
+    }),
+
+    createField.select({
+      name: `fontChoice`,
+      options: {
+        label: `Font choice`,
+        details: `Select the font family`,
+        choices: [
+          {value: `english`, label: `Volte Play English`},
+          {value: `hindiVolt`, label: `Volte Play Devanagari`},
+          {value: `hindiTiro`, label: `Tiro Devanagari Hindi`},
+          {value: `tamil`, label: `Tiro Tamil`},
+          {value: `bengali`, label: `Noto Sans Bengali`},
+        ]
+      }
     }),
 
     createField.text({

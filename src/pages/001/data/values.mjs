@@ -1,7 +1,21 @@
 // @ts-check
 export default {
   fontChoice: `english`, // english, hindiVolt, hindiTiro, tamil, bengali
-  backgroundChoice: `purple`, // purple, blue, pink, black, white
+  themeColorChoice: {
+    // purple, blue, pink, black, white
+    name: `purple`,
+    description: ``,
+    id: `644b52b4e628c856a6995e75`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/ogilvy-in/color-purple_qfdadb`,
+    datasets: {},
+  },
+  backgroundImageChoice: {
+    name: `no-image-preview`,
+    description: ``,
+    id: `644b87ddd6210aa596c47d63`,
+    url: `https://res.cloudinary.com/mabx-eu-prod/image/upload/v1/ogilvy-in/no-image-preview_olrrmo`,
+    datasets: {},
+  },
   headline: `Welcome the star \nparivaar to your family`,
   headlineSize: `2.25`,
   headlineTracking: `0`,

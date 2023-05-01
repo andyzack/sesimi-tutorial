@@ -2,6 +2,7 @@ import * as React from 'react'
 import { GridItem, ResponsiveImage as Img } from '@myadbox/exoplanet-toolkit'
 import Price from '@/components/Price'
 import Logo from '@/components/Logo'
+import BackgroundImage from '@/components/BackgroundImage'
 
 /**
 * This is the ContentBlock component
@@ -10,6 +11,7 @@ import Logo from '@/components/Logo'
 * @param {object} [props.photos] - sub headline details to display
 * @param {object} [props.colors] - color theme to display
 * @param {object} [props.logoChoice] - logo to display
+* @param {object} [props.backgroundImageChoice] - background image to display
 * @param {object} [props.price] - price details to display
 * @param {object} [props.disclaimer] - disclaimer details to display
 * @param {string} [props.className] - css class names
@@ -24,57 +26,67 @@ export const ContentBlock = ({
   photos = {},
   colors = {},
   logoChoice = {},
+  backgroundImageChoice = {},
   price = {},
   disclaimer = ``,
   className = ``,
   style = {},
 }) => {
     const dropShadow = colors.body.includes(`bg-tataplay-white`) ? `` : `drop-shadow-[0_5px_50px_rgba(0,0,0,0.25)]`
+  return (
+    <div
+      className={`
+        xo-content-block
+        grid h-full w-full overflow-hidden
+        grid-areas-[var(--areas1)] grid-rows-[var(--rows1)] grid-cols-[var(--columns1)]
+        min-12/10:grid-areas-[var(--areas2)] min-12/10:grid-rows-[var(--rows2)] min-12/10:grid-cols-[var(--columns2)]
+        ${className}
+      `}
+      style={{
+        // MQ LEGEND
+        // Custom Landscape 329mm X 250mm: min-12/10
 
-    return (
-      <div
+        // GRID LEGEND
+        // 🉐 = logo
+        // 👑 = headline + subheadline
+        // 🏷 = price
+        // 👪 = celeb photoshots
+        // 📓 = disclaimer
+
+        '--areas1': `
+          " ◤   —   —   —   —  ◥ "
+          " l  ..  ..  🉐  ..  ▍"
+          " l  📓  🏷  👑  ..  ▍"
+          " l  📓  ..  👑  ..  ▍"
+          " l  📓  👪  👪  ..  ▍"
+          " ◣   ▂   ▂   ▂   ▂  ◢ "
+        `,
+        '--rows1': `10.8fr 2.5em 11em 21.2fr 139.7fr 41.7fr`,
+        '--columns1': `2.6fr 7fr 11em 110fr 7fr 2.6fr`,
+
+        '--areas2': `
+          " ◤   —   —   —   —   —   —  ◥ "
+          " l  ..  🉐  🏷  ..  ..  ..  ▍"
+          " l  📓  ..  🏷  👑  👑  ..  ▍"
+          " l  📓  👪  👪  👪  ..  ..  ▍"
+          " l  ..  👪  👪  👪  ..  ..  ▍"
+          " ◣   ▂   ▂   ▂   ▂   ▂   ▂  ◢ "
+        `,
+        '--rows2': `18.4fr 2em 9em 164.8fr 22.9fr 0`,
+        '--columns2': `6.4fr 8.4fr 95.6fr 11em 70.2fr 90.2fr 6.6fr 6.4fr`,
+        ...style
+      }}
+    >
+      {/* Background image/color */}
+      <GridItem
         className={`
-          xo-content-block
-          grid h-full w-full overflow-hidden
-          grid-areas-[var(--areas1)] grid-rows-[var(--rows1)] grid-cols-[var(--columns1)]
-          min-12/10:grid-areas-[var(--areas2)] min-12/10:grid-rows-[var(--rows2)] min-12/10:grid-cols-[var(--columns2)]
-          ${className}
+          grid-in-[1/1/-1/-1]
         `}
-        style={{
-          // MQ LEGEND
-          // Custom Landscape 329mm X 250mm: min-12/10
-
-          // GRID LEGEND
-          // 🉐 = logo
-          // 👑 = headline + subheadline
-          // 🏷 = price
-          // 👪 = celeb photoshots
-          // 📓 = disclaimer
-
-          '--areas1': `
-            " ◤   —   —   —   —  ◥ "
-            " l  ..  ..  🉐  ..  ▍"
-            " l  📓  🏷  👑  ..  ▍"
-            " l  📓  ..  👑  ..  ▍"
-            " l  📓  👪  👪  ..  ▍"
-            " ◣   ▂   ▂   ▂   ▂  ◢ "
-          `,
-          '--rows1': `10.8fr 2.5em 11em 21.2fr 139.7fr 41.7fr`,
-          '--columns1': `2.6fr 7fr 11em 110fr 7fr 2.6fr`,
-
-          '--areas2': `
-            " ◤   —   —   —   —   —   —  ◥ "
-            " l  ..  🉐  🏷  ..  ..  ..  ▍"
-            " l  📓  ..  🏷  👑  👑  ..  ▍"
-            " l  📓  👪  👪  👪  ..  ..  ▍"
-            " l  ..  👪  👪  👪  ..  ..  ▍"
-            " ◣   ▂   ▂   ▂   ▂   ▂   ▂  ◢ "
-          `,
-          '--rows2': `18.4fr 2em 9em 164.8fr 22.9fr 0`,
-          '--columns2': `6.4fr 8.4fr 95.6fr 11em 70.2fr 90.2fr 6.6fr 6.4fr`,
-          ...style
-        }}
       >
+        <BackgroundImage src={backgroundImageChoice} colors={colors} />
+      </GridItem>
+
+      {/* Price */}
       <GridItem
         className={`
           grid-in-[var(--grid-in)] z-10
@@ -85,7 +97,8 @@ export const ContentBlock = ({
       >
         <Price price={price} />
       </GridItem>
-
+    
+      {/* Photoshot */}
       <GridItem
         className={`
           grid-in-[var(--grid-in)]
@@ -193,7 +206,8 @@ export const ContentBlock = ({
           </GridItem>
         </div>
       </GridItem>
-
+      
+      {/* Headline/copy */}
       <GridItem
         className={`
           grid-in-[var(--grid-in)] z-10
@@ -210,7 +224,8 @@ export const ContentBlock = ({
           {children}
         </div>
       </GridItem>
-
+      
+      {/* Logo */}
       <GridItem
         className={`
           grid-in-[var(--grid-in)]
@@ -232,7 +247,8 @@ export const ContentBlock = ({
           <Logo colors={colors} className='pl-3 h-full' />
         )}
       </GridItem>
-
+      
+      {/* Disclaimer */}
       {disclaimer && <GridItem
         className={`
           grid-in-[var(--grid-in)] z-10

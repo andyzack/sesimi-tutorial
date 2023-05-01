@@ -15,9 +15,10 @@ const Template = (props) => {
   // data/values.mjs and data/config.mjs `fields`.
   const {
     page: {
-      fontChoice,
-      backgroundChoice,
+      themeColorChoice,
+      backgroundImageChoice,
       logoChoice,
+      fontChoice,
       headline,
       headlineSize,
       headlineTracking,
@@ -197,7 +198,7 @@ const Template = (props) => {
     bottomTracking: priceCopyBottomTracking,
   }
 
-  // Background list for use in the backgroundChoice dropdown
+  // Background list for use in the themeColorChoice dropdown
   let colorList = {
     purple: {
       body: `bg-tataplay-purple text-white`,
@@ -236,7 +237,7 @@ const Template = (props) => {
     },
   }
 
-  const colors = colorList[backgroundChoice] || colorList[`purple`] // default to purple if no match
+  const colors = colorList[themeColorChoice?.name] || colorList[`white`] // default to purple if no match
 
   return (
     <Body
@@ -260,7 +261,7 @@ const Template = (props) => {
       >
         {/* Content Block */}
         <GridItem className={`grid-in-[1/1/-1/-1]`}>
-          <ContentBlock photos={photos} disclaimer={disclaimerObj} colors={colors} logoChoice={logoChoice} price={priceObj}>
+          <ContentBlock photos={photos} disclaimer={disclaimerObj} colors={colors} logoChoice={logoChoice} price={priceObj} backgroundImageChoice={backgroundImageChoice}>
             {/* Headline and Copy as child elements */}
             <Headline headline={headlineObj} copy={copyObj} />
             <Copy copy={copyObj} className="text-[10.9pt] leading-tight" />
