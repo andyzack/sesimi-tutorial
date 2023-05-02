@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { GridItem, ResponsiveImage as Img } from '@myadbox/exoplanet-toolkit'
-import Price from '@/components/Price'
-import Logo from '@/components/Logo'
-import BackgroundImage from '@/components/BackgroundImage'
+import Price from '../components/Price'
+import Logo from '../components/Logo'
+import BackgroundImage from '../components/BackgroundImage'
 
 /**
 * This is the ContentBlock component
