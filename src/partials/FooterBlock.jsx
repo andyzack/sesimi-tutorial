@@ -90,6 +90,7 @@ export const FooterBlock = ({cta = {}, footerHeadline = {}, footerCopy = {}, par
       <GridItem
         className={`
           grid-in-[var(--grid-in)]
+          ${partnersList.length > 0 ? `` : `hidden`}
         `}
         style={{
           '--grid-in': `🤲`,

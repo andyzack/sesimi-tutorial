@@ -211,7 +211,7 @@ export const ContentBlock = ({
       <GridItem
         className={`
           grid-in-[var(--grid-in)] z-10
-          grid items-center pt-6
+          grid items-center pt-6 min-12/10:pt-0
         `}
         style={{
           '--grid-in': price?.text ? `👑` : `👑 / 🏷 / 👑 / 👑`,
@@ -228,25 +228,30 @@ export const ContentBlock = ({
       {/* Logo */}
       <GridItem
         className={`
-          grid-in-[var(--grid-in-1)] min-12/10:grid-in-[var(--grid-in-2)]
+          grid-in-[var(--grid-in-1)] min-12/10:grid-in-[var(--grid-in-2)] pl-3 
         `}
         style={{
           '--grid-in-1': price?.text ? `🉐` : `🉐 / 🏷 / 🉐 / 🉐`,
           '--grid-in-2': `🉐`,
         }}
       >
-        {!logoChoice?.name.includes(`no-image`) ? (
-          <div
-            className={`
-              flex items-start justify-start
-            `}
-          >
-            <Img src={logoChoice?.url.replace(`v1/ogilvy-in`,`e_trim/v1/ogilvy-in`)} className='pl-3 object-contain absolute' />
-          </div>
-          
-        ) : (
-          <Logo colors={colors} className='pl-3 h-full' />
-        )}
+        <div
+          data-hitarea="logoChoice"
+          className={`h-full`}
+        >
+          {!logoChoice?.name.includes(`no-image`) ? (
+            <div
+              className={`
+                flex items-start justify-start
+              `}
+            >
+              <Img src={logoChoice?.url.replace(`v1/ogilvy-in`,`e_trim/v1/ogilvy-in`)} className='object-contain absolute' />
+            </div>
+            
+          ) : (
+            <Logo colors={colors} className='h-full' />
+          )}
+        </div>
       </GridItem>
       
       {/* Disclaimer */}
