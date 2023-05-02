@@ -6,8 +6,8 @@ import {Body, GridItem, useTemplate /*, useAnimation*/} from '@myadbox/exoplanet
 import page from './data/values.mjs'
 import Headline from '../../components/Headline.jsx'
 import Copy from '../../components/Copy.jsx'
-import ContentBlock from '@/partials/ContentBlock'
-import FooterBlock from '@/partials/FooterBlock'
+import ContentBlock from '../../partials/ContentBlock'
+import FooterBlock from '../../partials/FooterBlock'
 
 /** @type ExoTemplate */
 const Template = (props) => {
