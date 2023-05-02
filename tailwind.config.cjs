@@ -6,37 +6,44 @@ const config = {
   content: [`./{src,dist}/**/*.{js,jsx,ts,tsx,svg}`],
   theme: {
     fontFamily: {
-      notoSansEnglish: [
+      VoltePlay: [
+        `"Volte Play"`,
+        `sans-serif`,
+      ],
+      VoltePlayDevanagari: [
+        `"Volte Play Devanagari"`,
+        `sans-serif`,
+      ],
+      NotoSansEnglish: [
         `"Noto Sans"`,
         `sans-serif`,
       ],
-      lobster: [
-        `"Lobster", cursive`,
-      ],
-      notoSansBengali: [
+      NotoSansBengali: [
         `"Noto Sans Bengali"`,
         `sans-serif`,
       ],
-      tiroDevanagari: [
+      TiroDevanagari: [
         `"Tiro Devanagari"`,
         `serif`,
       ],
-      tiroTamil: [
+      TiroTamil: [
         `"Tiro Tamil"`,
         `serif`,
       ],
     },
     screens: {
-      'min-02/10': { 'raw': `(min-aspect-ratio: 200 / 1000)` }, // Wide Skyscraper
-      'min-04/10': { 'raw': `(min-aspect-ratio: 400 / 1000)` }, // Half Page Ad (Double MREC)
-      'min-10/10': { 'raw': `(min-aspect-ratio: 1000 / 1000)` }, // Medium Rectangle (MREC)
-      'min-60/10': { 'raw': `(min-aspect-ratio: 6000 / 1000)` }, // Mobile Leaderboard
-      'min-80/10': { 'raw': `(min-aspect-ratio: 8000 / 1000)` }, // Leaderboard
+      'min-12/10': { 'raw': `(min-aspect-ratio: 1200 / 1000)` },
     },
     extend: {
+      fontSize: {
+        'body': `1em`,
+      },
       colors: {
-        'midnight-forest': `#03292d`,
-        'electric-lime': `#d1ff3b`,
+        'tataplay-purple': `#5b2d87`,
+        'tataplay-pink': `#e50075`,
+        'tataplay-blue': `#6b00dd`,
+        'tataplay-black': `#050606`,
+        'tataplay-white': `#ffffff`,
       }
     },
   },

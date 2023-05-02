@@ -3,17 +3,56 @@
 // @import 'components/Wrapper/index.css';
 
 /* Example of linking to a local font file: */
-// @font-face {
-//   font-family: 'Source Sans Pro';
-//   src: url('./fonts/SourceSansPro.woff2') format('woff2');
-//   font-weight: 100 400;
-//   font-display: block;
-// }
+@font-face {
+  font-family: 'Volte Play';
+  src: url('./fonts/VoltePlay-Regular.woff2') format('woff2'),
+  url('./fonts/VoltePlay-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Volte Play';
+  src: url('./fonts/VoltePlay-Semibold.woff2') format('woff2'),
+  url('./fonts/VoltePlay-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Volte Play';
+  src: url('./fonts/VoltePlay-Bold.woff2') format('woff2'),
+  url('./fonts/VoltePlay-Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Volte Play Devanagari';
+  src: url('./fonts/VoltePlayDevanagari-Regular.woff2') format('woff2'),
+  url('./fonts/VoltePlayDevanagari-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Volte Play Devanagari';
+  src: url('./fonts/VoltePlayDevanagari-Semibold.woff2') format('woff2'),
+  url('./fonts/VoltePlayDevanagari-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Volte Play Devanagari';
+  src: url('./fonts/VoltePlayDevanagari-Bold.woff2') format('woff2'),
+  url('./fonts/VoltePlayDevanagari-Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: block;
+}
 
 /* Or you may use Google Fonts directly from their server like this: */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500&family=Noto+Sans:wght@300;400;500;600&family=Tiro+Devanagari+Hindi&family=Tiro+Tamil&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi&family=Tiro+Tamil&display=swap');
 
 /* To use Tailwind, uncomment the following lines: */
 @tailwind base;
