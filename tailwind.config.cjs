@@ -3,7 +3,10 @@ import gridAreas from '@savvywombat/tailwindcss-grid-areas'
 
 /** @type {import('tailwindcss').Config} */
 const config = {
-  content: [`./{src,dist}/**/*.{js,jsx,ts,tsx,svg}`],
+  content: [
+    `./{src,dist}/**/*.{js,jsx,ts,tsx,svg}`,
+    `./node_modules/@myadbox/exoplanet-toolkit/**/*.{js,jsx,ts,tsx,svg}`
+  ],
   theme: {
     fontFamily: {
       VoltePlay: [
