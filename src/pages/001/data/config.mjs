@@ -102,6 +102,7 @@ export default {
 
     createField.text({
       name: `price`,
+      maxLength: 4,
       required: true,
       options: {
         label: `Price`,
