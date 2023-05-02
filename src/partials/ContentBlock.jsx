@@ -117,7 +117,7 @@ export const ContentBlock = ({
             '--columns': `repeat(32, 1fr)`,
           }}
         >
-          <GridItem
+          {!photos[0]?.photoAsset?.name?.includes(`no-image`) && <GridItem
             data-hitarea="photo1"
             className={`
               grid-in-[var(--grid-in)] z-[var(--z-index)]
@@ -137,9 +137,9 @@ export const ContentBlock = ({
                 '--photo-rotate': `${photos[0].photoRotate}deg`,
               }}
             />
-          </GridItem>
+          </GridItem>}
 
-          <GridItem
+          {!photos[1]?.photoAsset?.name?.includes(`no-image`) && <GridItem
             data-hitarea="photo2"
             className={`
               grid-in-[var(--grid-in)] z-[var(--z-index)]
@@ -159,9 +159,9 @@ export const ContentBlock = ({
                 '--photo-rotate': `${photos[1].photoRotate}deg`,
               }}
             />
-          </GridItem>
+          </GridItem>}
 
-          <GridItem
+          {!photos[2]?.photoAsset?.name?.includes(`no-image`) && <GridItem
             data-hitarea="photo3"
             className={`
               grid-in-[var(--grid-in)] z-[var(--z-index)]
@@ -181,9 +181,9 @@ export const ContentBlock = ({
                 '--photo-rotate': `${photos[2].photoRotate}deg`,
               }}
             />
-          </GridItem>
+          </GridItem>}
 
-          <GridItem
+          {!photos[3]?.photoAsset?.name?.includes(`no-image`) && <GridItem
             data-hitarea="photo4"
             className={`
               grid-in-[var(--grid-in)] z-[var(--z-index)]
@@ -203,7 +203,7 @@ export const ContentBlock = ({
                 '--photo-rotate': `${photos[3].photoRotate}deg`,
               }}
             />
-          </GridItem>
+          </GridItem>}
         </div>
       </GridItem>
       
